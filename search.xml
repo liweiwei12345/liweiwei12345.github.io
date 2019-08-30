@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[检查配置错误]]></title>
+    <url>%2F2019%2F08%2F30%2F%E6%A3%80%E6%9F%A5%E9%85%8D%E7%BD%AE%E9%94%99%E8%AF%AF%2F</url>
+    <content type="text"><![CDATA[Fatal: TaskCanceldException encountered解决方法：git config –global credential.helper manager]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[第一次写Blog]]></title>
     <url>%2F2019%2F08%2F29%2F%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%86%99Blog%2F</url>
     <content type="text"><![CDATA[第一个Blog 折腾了几天，功夫不负有心人，很开心终于可以写Blog！！！]]></content>
