@@ -6,8 +6,8 @@
     <content type="text"><![CDATA[Fatal: TaskCanceldException encountered解决方法：git config –global credential.helper manager （不成功） 将repo修改成了git@github.com:chengjianhua/chengjianhua.github.io.git（取自https://blog.csdn.net/hhgggggg/article/details/77853665）]]></content>
   </entry>
   <entry>
-    <title><![CDATA[第一次写Blog]]></title>
+    <title><![CDATA[Github+Hexo 搭建个人主页]]></title>
     <url>%2F2019%2F08%2F29%2F%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%86%99Blog%2F</url>
-    <content type="text"><![CDATA[第一个Blog 折腾了几天，功夫不负有心人，很开心终于可以写Blog！！！]]></content>
+    <content type="text"><![CDATA[搭建过程中遇到的问题和解决方案整套搭建是参考吴润·RunDouble]]></content>
   </entry>
 </search>
