@@ -352,43 +352,42 @@
 <li><p>仓库名设置为 用户名.github.io</p>
 </li>
 </ul>
-<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><h3 id="Git官网-Git-Downloading-Package-下载安装，测试git是否安装成功"><a href="#Git官网-Git-Downloading-Package-下载安装，测试git是否安装成功" class="headerlink" title="[Git官网](Git - Downloading Package )下载安装，测试git是否安装成功"></a>[Git官网](<a href="https://link.zhihu.com/?target=https%3A//git-scm.com/download/win" target="_blank" rel="noopener">Git - Downloading Package</a> )下载安装，测试git是否安装成功</h3><p><img src="D:%5Cdocument%5CBlog%5Cblog%5Cthemes%5Cnext%5Csource%5Cimages%5Cgit%E6%B5%8B%E8%AF%95%E6%88%90%E5%8A%9F.JPG" alt="git测试成功"></p>
+<h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><h3 id="Git官网-Git-Downloading-Package-下载安装，测试git是否安装成功"><a href="#Git官网-Git-Downloading-Package-下载安装，测试git是否安装成功" class="headerlink" title="[Git官网](Git - Downloading Package )下载安装，测试git是否安装成功"></a>[Git官网](<a href="https://link.zhihu.com/?target=https%3A//git-scm.com/download/win" target="_blank" rel="noopener">Git - Downloading Package</a> )下载安装，测试git是否安装成功</h3><p><img src="/images/git%E6%B5%8B%E8%AF%95%E6%88%90%E5%8A%9F.JPG" alt></p>
 <h3 id="Git与GitHub账号绑定（实现远程仓库和本地仓库的连接）"><a href="#Git与GitHub账号绑定（实现远程仓库和本地仓库的连接）" class="headerlink" title="Git与GitHub账号绑定（实现远程仓库和本地仓库的连接）"></a>Git与GitHub账号绑定（实现远程仓库和本地仓库的连接）</h3><ul>
 <li>配置用户信息 </li>
 </ul>
 <p>git config –global user.name “GitHub用户名”</p>
 <p>git config –global user.email “GitHub注册邮箱”</p>
 <ul>
-<li><p>生成ssh密钥文件（实现每次推送不用输密码）</p>
-<p>（1）ssh-keygen -t rsa -C “GitHub注册邮箱”</p>
-</li>
+<li>生成ssh密钥文件（实现每次推送不用输密码）</li>
 </ul>
-<p>C:\Users\Rescue\ .ssh文件夹中会出现两个文件<img src="D:%5Cdocument%5CBlog%5Cblog%5Cthemes%5Cnext%5Csource%5Cimages%5Cgit%E9%85%8D%E7%BD%AE%E5%AF%86%E9%92%A5.JPG" alt="git配置密钥"></p>
+<p>（1）ssh-keygen -t rsa -C “GitHub注册邮箱”</p>
+<p>C:\Users\Rescue\ .ssh文件夹中会出现两个文件<img src="/images/git%E9%85%8D%E7%BD%AE%E5%AF%86%E9%92%A5.JPG" alt></p>
 <p> <strong>问题</strong></p>
 <p>理应windows系统下目录会有三个文件，额外一个是 known_hosts，所以需要添加，否则密钥匹配不成功</p>
-<p>​         <img src="D:%5Cdocument%5CBlog%5Cblog%5Cthemes%5Cnext%5Csource%5Cimages%5C%E5%AF%86%E9%92%A5%E8%AE%BE%E7%BD%AE%E5%87%BA%E9%94%99.PNG" alt="密钥设置出错"></p>
+<p>​         <img src="/images/%E5%AF%86%E9%92%A5%E8%AE%BE%E7%BD%AE%E5%87%BA%E9%94%99.PNG" alt></p>
 <p><strong>解决</strong></p>
 <p>参考(<a href="https://www.jianshu.com/p/30813541aef2" target="_blank" rel="noopener">https://www.jianshu.com/p/30813541aef2</a>)</p>
 <p>输入： ssh-keyscan -t rsa github.com &gt;&gt; ~/.ssh /known_hosts</p>
-<p><img src="D:%5Cdocument%5CBlog%5Cblog%5Cthemes%5Cnext%5Csource%5Cimages%5C%E6%B7%BB%E5%8A%A0known_hosts%E6%96%87%E4%BB%B6.PNG" alt="添加known_hosts文件"></p>
+<p><img src="/images/%E6%B7%BB%E5%8A%A0known_hosts%E6%96%87%E4%BB%B6.PNG" alt></p>
 <p>（2）打开GitHub_Setting_keys页面，新建new SSH Key</p>
 <p>标题可以不填，内容是复制“id_rsa_pub”文件内容</p>
 <p>（3）测试密钥设置成功</p>
-<p><img src="D:%5Cdocument%5CBlog%5Cblog%5Cthemes%5Cnext%5Csource%5Cimages%5C%E8%A7%A3%E5%86%B3%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98.PNG" alt="解决配置问题"></p>
+<p><img src="/images/%E8%A7%A3%E5%86%B3%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98.PNG" alt></p>
 <h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ul>
 <li>安装<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a>，配置Hexo的环境变量</li>
 <li>检测安装成功</li>
 </ul>
-<p><img src="D:%5Cdocument%5CBlog%5Cblog%5Cthemes%5Cnext%5Csource%5Cimages%5C%E6%B5%8B%E8%AF%95node.js%E5%AE%89%E8%A3%85%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F.JPG" alt="测试node.js安装是否成功"></p>
+<p><img src="/images/%E6%B5%8B%E8%AF%95node.js%E5%AE%89%E8%A3%85%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F.JPG" alt></p>
 <h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><ul>
 <li><p>在电脑上创建一个文件夹（Hexo，Blog，Github远程仓库都在里面）</p>
 </li>
 <li><p>使用npm命令安装Hexo  </p>
 <p>在当前文件夹里面（git bash或cmd）输入npm install -g hexo-cli</p>
-<p><img src="D:%5Cdocument%5CBlog%5Cblog%5Cthemes%5Cnext%5Csource%5Cimages%5C%E5%AE%89%E8%A3%85hexo.PNG" alt="安装hexo"></p>
+<p><img src="/images/%E5%AE%89%E8%A3%85hexo.PNG" alt></p>
 </li>
 <li><p>初始化博客</p>
-<p>git bash下输入 hexo init blog<img src="D:%5Cdocument%5CBlog%5Cblog%5Cthemes%5Cnext%5Csource%5Cimages%5Chexo%E5%88%9D%E5%A7%8B%E5%8C%96%E5%8D%9A%E5%AE%A2.PNG" alt="hexo初始化博客"></p>
+<p>git bash下输入 hexo init blog<img src="/images/hexo%E5%88%9D%E5%A7%8B%E5%8C%96%E5%8D%9A%E5%AE%A2.PNG" alt></p>
 </li>
 </ul>
 <h3 id="推送网站"><a href="#推送网站" class="headerlink" title="推送网站"></a>推送网站</h3><ul>
@@ -398,9 +397,9 @@
 </li>
 </ul>
 <p><strong>问题</strong></p>
-<p><img src="D:%5Cdocument%5CBlog%5Cblog%5Cthemes%5Cnext%5Csource%5Cimages%5Cgit%E9%83%A8%E7%BD%B2%E6%8F%92%E4%BB%B6.PNG" alt="git部署插件"></p>
+<p><img src="/images/git%E9%83%A8%E7%BD%B2%E6%8F%92%E4%BB%B6.PNG" alt></p>
 <p><strong>解决</strong></p>
-<p>输入：npm install <a href="mailto:hexo-renderer-marked@2.0.0" target="_blank" rel="noopener">hexo-renderer-marked@2.0.0</a><img src="D:%5Cdocument%5CBlog%5Cblog%5Cthemes%5Cnext%5Csource%5Cimages%5C%E4%BF%9D%E5%AD%98%E9%85%8D%E7%BD%AE%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF-%E8%A7%A3%E5%86%B3.PNG" alt="保存配置出现错误-解决"></p>
+<p>输入：npm install <a href="mailto:hexo-renderer-marked@2.0.0" target="_blank" rel="noopener">hexo-renderer-marked@2.0.0</a><img src="/images/%E4%BF%9D%E5%AD%98%E9%85%8D%E7%BD%AE%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF-%E8%A7%A3%E5%86%B3.PNG" alt></p>
 <ul>
 <li><p>测试博客上线</p>
 <p>hexo clean</p>
