@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[windows_question]]></title>
+    <url>%2F2019%2F11%2F23%2Fwindows-question%2F</url>
+    <content type="text"><![CDATA[什么是环境变量？用户变量当前用户可以对其进行添加、修改或删除 系统变量只有管理员才能添加、修改或删除，由windows定义并应用到所有系统用户 重要系统变量介绍 NUMBER_OF_PROCESSORS变量：代表用户电脑中逻辑处理器的数量 OS变量：表面用户的操作系统 Path变量：规定操作系统在指定的文件路径中查看可执行文件 环境变量的应用实例索引文件夹在用户环境变量中，随意设置一个变量名，然后把路径指定到你的文件夹中或者某个文件（exe)中，接着在运行中（win+r)中输入%变量名%,便可以直接进入文件夹中或者运行该程序 打开应用在用户环境变量中添加应用的目录即可]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[软件资源分享]]></title>
     <url>%2F2019%2F11%2F23%2FSoftware%2F</url>
     <content type="text"><![CDATA[UltraEdit简介： UltraEdit（原名UltraEdit-32）是跨平台的一套商业性文本编辑器，由IDM Computer Solutions在1994年创造。UltraEdit有很强大的编程功能，支持宏、语法高亮度显示和正则表达式等功能。文件在标签中可以被浏览和编辑。安装需要约30 MB的磁盘空间。UltraEdit也支持以Unicode和hex编辑的模式 。 链接：https://pan.baidu.com/s/11NF30WgbwwGgfL8vf6hDcQ提取码：hqy6]]></content>
@@ -10,7 +18,7 @@
   </entry>
   <entry>
     <title><![CDATA[学习资料分享]]></title>
-    <url>%2F2019%2F09%2F01%2FStudy%2BData%2F</url>
+    <url>%2F2019%2F09%2F01%2FSource%2F</url>
     <content type="text"><![CDATA[清华大学实验安全教育考试题库链接：https://pan.baidu.com/s/1tYtOwMwS3_OCNdlHnomFMA提取码：dale]]></content>
       <categories>
         <category>source</category>
