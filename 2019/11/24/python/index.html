@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Liweiwei&#39;s Blog">
 <meta property="og:description" content="Python输入函数input1234567891011121314year,month,day = input(&quot;你的出生年月日:&quot;).split()age = 2019-int(year)if int(month) &amp;lt; 11:    age = ageelse:    if int(month) == 11:        if int(day) &amp;lt; 24:">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-24T02:42:52.447Z">
+<meta property="og:updated_time" content="2019-11-27T07:30:01.847Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python入门">
 <meta name="twitter:description" content="Python输入函数input1234567891011121314year,month,day = input(&quot;你的出生年月日:&quot;).split()age = 2019-int(year)if int(month) &amp;lt; 11:    age = ageelse:    if int(month) == 11:        if int(day) &amp;lt; 24:">
@@ -383,6 +383,18 @@
 <p>说明：</p>
 <p>1.不能在iuput里面定义数据类型，例如input(int,”…”)</p>
 <p>2.缩进非常重要，她表示的是循环、条件等的作用域，是Python精简有层次的灵魂</p>
+<h1 id="BIF"><a href="#BIF" class="headerlink" title="BIF"></a>BIF</h1><h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p>一个小游戏：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#调用random模块</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line">my_number = random.randint(<span class="number">1</span>,<span class="number">10</span>)</span><br><span class="line">temp = input(<span class="string">"请输入我心里想的一个数字："</span>)</span><br><span class="line">guess = int(temp)</span><br><span class="line"><span class="keyword">if</span> my_number == guess:</span><br><span class="line">    print(<span class="string">"""</span></span><br><span class="line"><span class="string">哇，你太棒了！好厉害呢</span></span><br><span class="line"><span class="string">"""</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">if</span> my_number &gt; guess:</span><br><span class="line">        print(<span class="string">"哥，你猜的比我小哦"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">"大了大了，哥"</span>)</span><br><span class="line">i=<span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> (guess != my_number) <span class="keyword">and</span> (i &lt; <span class="number">3</span>):</span><br><span class="line">    i = i+<span class="number">1</span></span><br><span class="line">    temp = input(<span class="string">"请在输入一次吧，你还有"</span>+str(<span class="number">4</span>-i)+<span class="string">"次机会"</span>)</span><br><span class="line">    guess = int(temp)</span><br><span class="line">    <span class="keyword">if</span> my_number == guess:</span><br><span class="line">        print(<span class="string">"""</span></span><br><span class="line"><span class="string">哇，你太棒了！</span></span><br><span class="line"><span class="string">好厉害呢</span></span><br><span class="line"><span class="string">            """</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> my_number &gt; guess:</span><br><span class="line">            print(<span class="string">"你猜的比我小哦"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"大了大了"</span>)</span><br><span class="line">input(<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+
+<p>matlab中：</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">i</span>=<span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">disp</span>(<span class="string">"你还有"</span>+num2str(<span class="built_in">i</span>)+<span class="string">"次机会"</span>)	<span class="comment">%数据类型转换</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>整型(整数)</p>
+<p>浮点型(小数)</p>
+<p>布尔类型：true &amp; false</p>
+<p>判断类型格式用type()    class()</p>
+<p>字符型：python(str)    matlab(char)</p>
+<h2 id="常用操作符"><a href="#常用操作符" class="headerlink" title="常用操作符"></a>常用操作符</h2><p>算数操作符(+ - * / // % **)    比较操作符(&gt; &gt;= &lt; &lt;= == !=)    逻辑操作符(and or not)</p>
 
       
     </div>
@@ -544,7 +556,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python输入函数input"><span class="nav-number">1.</span> <span class="nav-text">Python输入函数input</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python输入函数input"><span class="nav-number">1.</span> <span class="nav-text">Python输入函数input</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BIF"><span class="nav-number">2.</span> <span class="nav-text">BIF</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基础知识"><span class="nav-number">3.</span> <span class="nav-text">基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">3.1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用操作符"><span class="nav-number">3.2.</span> <span class="nav-text">常用操作符</span></a></li></ol></li></ol></div>
             
 
           </div>

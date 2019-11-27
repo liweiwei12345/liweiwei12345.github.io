@@ -11,7 +11,7 @@
   <entry>
     <title><![CDATA[Python入门]]></title>
     <url>%2F2019%2F11%2F24%2Fpython%2F</url>
-    <content type="text"><![CDATA[Python输入函数input1234567891011121314year,month,day = input("你的出生年月日:").split()age = 2019-int(year)if int(month) &lt; 11: age = ageelse: if int(month) == 11: if int(day) &lt; 24: age = age else: age = age-1 else: age = age-1print("你的年龄是:&#123;&#125;".format(age))input("") 说明： 1.不能在iuput里面定义数据类型，例如input(int,”…”) 2.缩进非常重要，她表示的是循环、条件等的作用域，是Python精简有层次的灵魂]]></content>
+    <content type="text"><![CDATA[Python输入函数input1234567891011121314year,month,day = input("你的出生年月日:").split()age = 2019-int(year)if int(month) &lt; 11: age = ageelse: if int(month) == 11: if int(day) &lt; 24: age = age else: age = age-1 else: age = age-1print("你的年龄是:&#123;&#125;".format(age))input("") 说明： 1.不能在iuput里面定义数据类型，例如input(int,”…”) 2.缩进非常重要，她表示的是循环、条件等的作用域，是Python精简有层次的灵魂 BIF基础知识一个小游戏： 123456789101112131415161718192021222324252627282930#调用random模块import randommy_number = random.randint(1,10)temp = input("请输入我心里想的一个数字：")guess = int(temp)if my_number == guess: print("""哇，你太棒了！好厉害呢""")else: if my_number &gt; guess: print("哥，你猜的比我小哦") else: print("大了大了，哥")i=0while (guess != my_number) and (i &lt; 3): i = i+1 temp = input("请在输入一次吧，你还有"+str(4-i)+"次机会") guess = int(temp) if my_number == guess: print("""哇，你太棒了！好厉害呢 """) else: if my_number &gt; guess: print("你猜的比我小哦") else: print("大了大了")input("") matlab中： 123i=3;disp("你还有"+num2str(i)+"次机会") %数据类型转换 数据类型整型(整数) 浮点型(小数) 布尔类型：true &amp; false 判断类型格式用type() class() 字符型：python(str) matlab(char) 常用操作符算数操作符(+ - * / // % **) 比较操作符(&gt; &gt;= &lt; &lt;= == !=) 逻辑操作符(and or not)]]></content>
       <categories>
         <category>python</category>
       </categories>
