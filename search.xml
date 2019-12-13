@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[test]]></title>
+    <title></title>
     <url>%2F2019%2F12%2F13%2Ftest%2F</url>
-    <content type="text"><![CDATA[1&#123;% pdf http://7xov2f.com1.z0.glb.clouddn.com/bash_freshman.pdf %&#125; 1&#123;% pdf ./test.pdf %&#125;]]></content>
+    <content type="text"><![CDATA[1234外部链接：&#123;% pdf http://7xov2f.com1.z0.glb.clouddn.com/bash_freshman.pdf %&#125;本地连接：&#123;% pdf ./test.pdf %&#125;]]></content>
   </entry>
   <entry>
     <title><![CDATA[Matlab]]></title>
