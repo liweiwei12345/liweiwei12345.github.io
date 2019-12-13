@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[test]]></title>
+    <url>%2F2019%2F12%2F13%2Ftest%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[Matlab]]></title>
     <url>%2F2019%2F11%2F25%2Fmatlab%2F</url>
     <content type="text"><![CDATA[1.输入输出参量可变的函数实现方法1：说明：nargin,nargout函数，建议里面用为else if省去许多end 123clc;clear;close;a=9;b=200;c=30;[max,num]=maxium(a,b,c) 1234567891011121314151617181920212223242526function [first,second]=maxium(a,b,c)switch nargin case 3 %相当于一个输入变量为3的函数 if a&gt;b max="a";num=a; else max="b";num=b; end if num&lt;c max="c";num=c; end case 2 %相当于一个输入变量为2的函数 if a&gt;b max="a";num=a; else max="b",num=b; endendswitch nargout case 2 first=max; %相当于一个输出变量为2的函数 second=num; case 1 first=num; %相当于一个输出变量为1的函数endend 1234567891011121314151617181920212223242526function [first,second]=maxium(a,b,c)if nargin==3 %相当于一个输入变量为3的函数 if a&gt;b max="a";num=a; else max="b";num=b; end if num&lt;c max="c";num=c; endendif nargin==2 %相当于一个输入变量为2的函数 if a&gt;b max="a";num=a; else max="b",num=b; endendif nargout==2 %相当于一个输出变量为2的函数 first=max; second=num;endif nargout==1 %相当于一个输出变量为1的函数 first=num; endend 实现方法2：说明：使用varargin,varargout函数 123clc;clear;close;a=9;b=200;c=30;[max,num]=maxium_1(a,b,c) 1234567891011121314151617181920212223242526272829function varargout = maxium_1(varargin)% varargin=[a,b,c];% varargout=[max,num];a=varargin&#123;1&#125;;b=varargin&#123;2&#125;;c=varargin&#123;3&#125;;%输入变量if nargin==3 %相当于一个输入变量为3的函数 if a&gt;b max="a";num=a; elseif a&lt;b max="b";num=b; elseif num&lt;c max="c";num=c; endendif nargin==2 %相当于一个输入变量为2的函数 if a&gt;b max="a";num=a; elseif a&lt;b max="b",num=b; endend%输出变量if nargout==2 varargout&#123;1&#125;=max; varargout&#123;2&#125;=num;elseif nargout==1 varargout&#123;1&#125;=num;endend 2.元胞数组的应用{} 和（）的区别说明：这里可以解释上面，因为varargin本身是个元胞数组，varargin用{}直接引用a,b,c里面的值（数据类型是数值型） 举例： 123456clc;clear;close;data1_1=&#123;2,3,4;1,1,1&#125;;data2_1=&#123;"a","b","c"&#125;;data1 = &#123;data1_1,"hello";data2_1,3&#125;;data1(2);[A,B,C]=data1&#123;2&#125;&#123;1,:&#125;;]]></content>
