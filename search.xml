@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[清华园讲座]]></title>
+    <url>%2F2019%2F12%2F20%2Fspeech%2F</url>
+    <content type="text"><![CDATA[讲座更新中]]></content>
+      <categories>
+        <category>speech</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[高等数值分析]]></title>
     <url>%2F2019%2F12%2F13%2Fgaozhi%2F</url>
     <content type="text"><![CDATA[高等数值分析第一次实验（Word编写） 高等数值分析第二次实验（Latex编写）]]></content>
@@ -27,7 +35,7 @@
   <entry>
     <title><![CDATA[windows常见问题]]></title>
     <url>%2F2019%2F11%2F23%2Fwindows-question%2F</url>
-    <content type="text"><![CDATA[什么是环境变量？用户变量当前用户可以对其进行添加、修改或删除 系统变量只有管理员才能添加、修改或删除，由windows定义并应用到所有系统用户 重要系统变量介绍 NUMBER_OF_PROCESSORS变量：代表用户电脑中逻辑处理器的数量 OS变量：表面用户的操作系统 Path变量：规定操作系统在指定的文件路径中查看可执行文件 环境变量的应用实例索引文件夹在用户环境变量中，随意设置一个变量名，然后把路径指定到你的文件夹中或者某个文件（exe)中，接着在运行中（win+r)中输入%变量名%,便可以直接进入文件夹中或者运行该程序 打开应用在用户环境变量Path中添加应用的目录即可 总结 在用户环境变量Path下添加后，均可在win+r中输入程序名，打开程序 如果新添加环境变量（非Path），则需要输入%变量名%才能打开程序 参考： https://zhuanlan.zhihu.com/p/67726501 鼠标接收器出现问题？这是我目前用的鼠标罗技M590，昨天晚上还能用，今天打开笔记本电脑发现鼠标不能用了，于是把USB接收器拔下来重新插入后，发现出现下面的提示 尝试的方法有： 1.重启电脑 2. 3.更新驱动 都失败了，然后我觉得应该是接收器出了问题，于是我找了一个也用罗技鼠标的朋友，用了他的接收器发现顺利连接上了，然后从网上单独购买了一个优联接收器。]]></content>
+    <content type="text"><![CDATA[什么是环境变量？用户变量当前用户可以对其进行添加、修改或删除 系统变量只有管理员才能添加、修改或删除，由windows定义并应用到所有系统用户 重要系统变量介绍 NUMBER_OF_PROCESSORS变量：代表用户电脑中逻辑处理器的数量 OS变量：表面用户的操作系统 Path变量：规定操作系统在指定的文件路径中查看可执行文件 环境变量的应用实例索引文件夹在用户环境变量中，随意设置一个变量名，然后把路径指定到你的文件夹中或者某个文件（exe)中，接着在运行中（win+r)中输入%变量名%,便可以直接进入文件夹中或者运行该程序 打开应用在用户环境变量Path中添加应用的目录即可 总结 在用户环境变量Path下添加后，均可在win+r中输入程序名，打开程序 如果新添加环境变量（非Path），则需要输入%变量名%才能打开程序 参考： https://zhuanlan.zhihu.com/p/67726501 鼠标接收器出现问题？这是我目前用的鼠标罗技M590，昨天晚上还能用，今天打开笔记本电脑发现鼠标不能用了，于是把USB接收器拔下来重新插入后，发现出现下面的提示 尝试的方法有： 1.重启电脑 2. 3.更新驱动 都失败了，然后我觉得应该是接收器出了问题，于是我找了一个也用罗技鼠标的朋友，用了他的接收器发现顺利连接上了，然后从网上单独购买了一个优联接收器。 Adobe Acrobat DC打开Adobe Acrobat提示：未找到IMSLib。Acrobat服务将无法正常工作 在网上找到IMSLib.dll文件下载复制文件到路径：C:\Program Files (x86)\Common Files\Adobe\OOBE\PDApp\P7如果没有相关文件夹，可以手动创建。 https://pan.baidu.com/s/1otyL7Co7O1SfKLyXU7Xctg 提取码：isht photoshop 下载PSCS6绿化.exe 绿化即可解决 https://pan.baidu.com/s/1SdUjeuPetjtnaPJARmYwVg 提取码：x8i3]]></content>
       <categories>
         <category>Windows</category>
       </categories>
