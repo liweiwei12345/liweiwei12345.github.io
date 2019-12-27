@@ -92,7 +92,8 @@
 <meta property="og:image" content="http://yoursite.com/2019/11/23/windows-question/5.png">
 <meta property="og:image" content="http://yoursite.com/2019/11/23/windows-question/4.JPG">
 <meta property="og:image" content="http://yoursite.com/2019/11/23/windows-question/5.jpg">
-<meta property="og:updated_time" content="2019-12-27T10:42:10.124Z">
+<meta property="og:image" content="http://yoursite.com/2019/11/23/windows-question/6.JPG">
+<meta property="og:updated_time" content="2019-12-27T15:03:05.610Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机常见问题">
 <meta name="twitter:description" content="什么是环境变量？用户变量当前用户可以对其进行添加、修改或删除 系统变量只有管理员才能添加、修改或删除，由windows定义并应用到所有系统用户 重要系统变量介绍 NUMBER_OF_PROCESSORS变量：代表用户电脑中逻辑处理器的数量 OS变量：表面用户的操作系统 Path变量：规定操作系统在指定的文件路径中查看可执行文件  环境变量的应用实例索引文件夹在用户环境变量中，随意设置一个变量名，然">
@@ -443,6 +444,19 @@
 <p>1.可以适当减小信号的衰减。</p>
 <p>2.搭建NAS，在局域网中设备之间用WiFi传输文件，速率可以达到125Mb/s。</p>
 <p>一般路由器端口wan端口是100Mbps，因为家用带宽就是100Mbps，上网下载速度最大只能12.5Mb/s。但是Lan端口就不同，如果是1Gbps，使用NAS（私有云），通过Lan端口连接NAS和台式机，两个设备在局域网下，设备之间传输文件的速率可以达到125Mb/s，和你办的带宽没有关系。如果路由器没有千兆Lan端口的话，可以考虑加一个交换机，光纤-猫-交换机（千兆端口）-路由器/NAS（群晖设备有两个Lan端口）或者就是上面说的换一个千兆WiFi路由器解决。</p>
+<h1 id="传输协议和接口"><a href="#传输协议和接口" class="headerlink" title="传输协议和接口"></a>传输协议和接口</h1><p>USB协议和雷电协议</p>
+<p>USB2.0    60Mb/s</p>
+<p>USB3.1 Gen1 俗称的USB3.0     640Mb/s     供电不足100W</p>
+<p>USB3.1 Gen2    1280Mb/s    供电可达100W</p>
+<p>USB3.2    2560Mb/s</p>
+<p>雷电3协议支持USB所有协议    5G/s</p>
+<p>TypeA接口支持USB3.1 Gen1和USB2.0协议</p>
+<p>TypeC接口支持USB2.0，USB3.1 Gen1和USB3.1 Gen2协议。如果有闪电标志即支持雷电3协议。</p>
+<p>举例：</p>
+<p><img src="./6.JPG" alt></p>
+<p>两个接口的传输速率都是640Mb/s，应该都是支持USB3.1 Gen1协议，小米充电器一般都是45W/65W，未达到100W。</p>
+<p>第二个TypeC接口无法连接电源，不支持转接 DP, HDMI,VGA 等等接口输出视频，也就是说并不能用来连接外接显示器。但是TypeA接口的USB3.0协议可以转接视频输出。说明小米笔记本pro的第二个TypeC接口是阉割版的。</p>
+<p>目前手机上的TypeC接口支持的是USB2.0协议。</p>
 
       
     </div>
@@ -604,7 +618,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是环境变量？"><span class="nav-number">1.</span> <span class="nav-text">什么是环境变量？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#用户变量"><span class="nav-number">1.1.</span> <span class="nav-text">用户变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统变量"><span class="nav-number">1.2.</span> <span class="nav-text">系统变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重要系统变量介绍"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">重要系统变量介绍</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境变量的应用实例"><span class="nav-number">1.2.1.</span> <span class="nav-text">环境变量的应用实例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#索引文件夹"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">索引文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打开应用"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">打开应用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.2.2.</span> <span class="nav-text">总结</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#鼠标接收器出现问题？"><span class="nav-number">2.</span> <span class="nav-text">鼠标接收器出现问题？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Adobe-Acrobat-DC"><span class="nav-number">3.</span> <span class="nav-text">Adobe Acrobat DC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#photoshop"><span class="nav-number">4.</span> <span class="nav-text">photoshop</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IP"><span class="nav-number">5.</span> <span class="nav-text">IP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#路由器、猫、网络带宽、NAS"><span class="nav-number">6.</span> <span class="nav-text">路由器、猫、网络带宽、NAS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#家用网络带宽"><span class="nav-number">6.0.0.1.</span> <span class="nav-text">家用网络带宽</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#猫、路由器"><span class="nav-number">6.0.1.</span> <span class="nav-text">猫、路由器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由器"><span class="nav-number">6.0.2.</span> <span class="nav-text">路由器</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是环境变量？"><span class="nav-number">1.</span> <span class="nav-text">什么是环境变量？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#用户变量"><span class="nav-number">1.1.</span> <span class="nav-text">用户变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统变量"><span class="nav-number">1.2.</span> <span class="nav-text">系统变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重要系统变量介绍"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">重要系统变量介绍</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境变量的应用实例"><span class="nav-number">1.2.1.</span> <span class="nav-text">环境变量的应用实例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#索引文件夹"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">索引文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打开应用"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">打开应用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.2.2.</span> <span class="nav-text">总结</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#鼠标接收器出现问题？"><span class="nav-number">2.</span> <span class="nav-text">鼠标接收器出现问题？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Adobe-Acrobat-DC"><span class="nav-number">3.</span> <span class="nav-text">Adobe Acrobat DC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#photoshop"><span class="nav-number">4.</span> <span class="nav-text">photoshop</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IP"><span class="nav-number">5.</span> <span class="nav-text">IP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#路由器、猫、网络带宽、NAS"><span class="nav-number">6.</span> <span class="nav-text">路由器、猫、网络带宽、NAS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#家用网络带宽"><span class="nav-number">6.0.0.1.</span> <span class="nav-text">家用网络带宽</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#猫、路由器"><span class="nav-number">6.0.1.</span> <span class="nav-text">猫、路由器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由器"><span class="nav-number">6.0.2.</span> <span class="nav-text">路由器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#传输协议和接口"><span class="nav-number">7.</span> <span class="nav-text">传输协议和接口</span></a></li></div>
             
 
           </div>
