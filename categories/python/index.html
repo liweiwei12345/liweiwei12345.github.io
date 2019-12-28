@@ -923,83 +923,13 @@
 
   
 
-  <!-- 花瓣特效 -->
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.transit.js"></script>
-<div id="content">
-    <!-- 飘花 -->
-    <div id="snowflake"></div>
-</div>
+  <script type="text/javascript" src="//libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+  <!-- 雪花特效 -->
 <script type="text/javascript">
-$(function() {
-    var snowflakeURl = [
-        './images/icon_petal_1.png',
-        './images/icon_petal_2.png',
-        './images/icon_petal_3.png',
-        './images/icon_petal_4.png',
-        './images/icon_petal_5.png',
-        './images/icon_petal_6.png',
-        './images/icon_petal_7.png',
-        './images/icon_petal_8.png'
-    ]  
-    var container = $("#content");
-       visualWidth = container.width();
-       visualHeight = container.height();
-　　//获取content的宽高
-    function snowflake() {
-        // 雪花容器
-        var $flakeContainer = $('#snowflake');
-　　　　　　
-        // 随机六张图
-        function getImagesName() {
-            return snowflakeURl[[Math.floor(Math.random() * 8)]];
-        }
-        // 创建一个雪花元素
-        function createSnowBox() {
-            var url = getImagesName();
-            return $('<div class="snowbox" />').css({
-                'width': 25,
-                'height': 26,
-                'position': 'absolute',
-                'backgroundRepeat':'no-repeat',
-                'zIndex': 100000,
-                'top': '-41px',
-                'backgroundImage': 'url(' + url + ')'
-            }).addClass('snowRoll');
-        }
-        // 开始飘花
-        setInterval(function() {
-            // 运动的轨迹
-            var startPositionLeft = Math.random() * visualWidth - 100,
-                startOpacity    = 1,
-                endPositionTop  = visualHeight - 40,
-                endPositionLeft = startPositionLeft - 100 + Math.random() * 500,
-                duration        = visualHeight * 10 + Math.random() * 5000;
-            // 随机透明度，不小于0.5
-            var randomStart = Math.random();
-            randomStart = randomStart < 0.5 ? startOpacity : randomStart;
-            // 创建一个雪花
-            var $flake = createSnowBox();
-            // 设计起点位置
-            $flake.css({
-                left: startPositionLeft,
-                opacity : randomStart
-            });
-            // 加入到容器
-            $flakeContainer.append($flake);
-            // 开始执行动画
-            $flake.transition({
-                top: endPositionTop,
-                left: endPositionLeft,
-                opacity: 0.7
-            }, duration, 'ease-out', function() {
-                $(this).remove() //结束后删除
-            });
-        }, 500);
-    }
-     snowflake()
-　　　//执行函数
-})
+  var windowWidth = $(window).width();
+  if (windowWidth > 480) {
+    document.write('<script type="text/javascript" src="/js/src/snow.js"><\/script>');
+  }
 </script>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":90,"height":180},"mobile":{"show":false},"react":{"opacityDefault":1,"opacityOnHover":1},"log":false,"tagMode":false});</script></body>
 </html>
