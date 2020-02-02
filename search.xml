@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[每日计划安排]]></title>
+    <url>%2F2020%2F01%2F13%2Fplan%2F</url>
+    <content type="text"><![CDATA[持续更新中…]]></content>
+      <categories>
+        <category>plan</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[树莓派]]></title>
     <url>%2F2019%2F12%2F28%2Fraspberry%2F</url>
     <content type="text"><![CDATA[准备要做的事1.在家里，将树莓派连接WiFi后，用路由器设置DDNS，获得一个域名，然后将树莓派被分配的内网IP地址设置为静态，端口映射获得外部映射端口。 目的：得到一个域名和端口 用笔记本电脑ssh访问树莓派 2.将一个U盘挂载到树莓派上，用smb协议做一个NAS。]]></content>
