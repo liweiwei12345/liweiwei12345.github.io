@@ -93,7 +93,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/11/23/windows-question/4.JPG">
 <meta property="og:image" content="http://yoursite.com/2019/11/23/windows-question/5.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/11/23/windows-question/6.jpg">
-<meta property="og:updated_time" content="2020-01-03T12:36:29.840Z">
+<meta property="og:updated_time" content="2020-02-02T04:15:16.878Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机常见问题">
 <meta name="twitter:description" content="什么是环境变量？用户变量当前用户可以对其进行添加、修改或删除 系统变量只有管理员才能添加、修改或删除，由windows定义并应用到所有系统用户 重要系统变量介绍 NUMBER_OF_PROCESSORS变量：代表用户电脑中逻辑处理器的数量 OS变量：表面用户的操作系统 Path变量：规定操作系统在指定的文件路径中查看可执行文件  环境变量的应用实例索引文件夹在用户环境变量中，随意设置一个变量名，然">
@@ -421,7 +421,7 @@
 <p>现在对于Adobe系列产品，下面网站提供了详细的安装方式和安装包</p>
 <p><a href="https://www.isharepc.com/" target="_blank" rel="noopener">https://www.isharepc.com/</a></p>
 <h1 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h1><p>IP地址分为公网IP和私网IP</p>
-<p>我们用笔记本电脑在网上查询的IP地址都是公网IP地址，然后用ipconfig查询的地址发现与网上查询的地址不同，说明我们用的都是公网IP分配的私网IP。</p>
+<p>我们用笔记本电脑在网上查询的IP地址都是公网IP地址，然后用ipconfig查询的地址发现IPV4地址与网上查询的地址不同，说明我们用的都是公网IP分配的私网IP。</p>
 <p>举例说明：</p>
 <p>1.家里使用的路由器</p>
 <p>我们家里连接同一个路由器（局域网）的不同设备，都被分配了一个私网IP地址，各不相同，但是在外网看来我们都是同一个IP地址（公网IP，运营商每次分配给我们的公网IP是不一样的，都是从IP池里随机取的。可以重启路由器观察一下，每当你重启一次路由器之后，公网IP就会切换。这里说明：有线网都是采用公网IP），默认私网IP地址是动态的，但是可以自己设置成静态。</p>
@@ -442,28 +442,47 @@
 <p>可以在办公室把公网IP设置成静态，把电脑做成服务器，然后在校外连接自己电脑（中转服务器），再访问学校的某个地址（私网IP），下载文献，访问信息门户。本质与VPN原理相同。</p>
 <p>4.Google插件VPN翻墙</p>
 <p>境内访问境外的中转服务器，然后服务器（公网IP）再访问其中的某个地址（私网IP）分配给你。</p>
+<h1 id="服务器和普通电脑"><a href="#服务器和普通电脑" class="headerlink" title="服务器和普通电脑"></a>服务器和普通电脑</h1><p>这里不谈论性能，只介绍IP区别</p>
+<p>服务器的IP是固定不变的</p>
+<p>普通的PC是变化的</p>
+<h2 id="同一个局域网下电脑之间相互访问"><a href="#同一个局域网下电脑之间相互访问" class="headerlink" title="同一个局域网下电脑之间相互访问"></a>同一个局域网下电脑之间相互访问</h2><p>以windows为例，只需目标电脑打开远程桌面连接，关闭防火墙即可。载体电脑Win+R输入mstsc，计算机：局域网IP，计算机用户名（一般默认为Adminstrator），或者打开cmd输入net user查看</p>
 <h1 id="路由器、猫、网络带宽、NAS"><a href="#路由器、猫、网络带宽、NAS" class="headerlink" title="路由器、猫、网络带宽、NAS"></a>路由器、猫、网络带宽、NAS</h1><h4 id="家用网络带宽"><a href="#家用网络带宽" class="headerlink" title="家用网络带宽"></a>家用网络带宽</h4><p>一般是100Mbps，换算为12.5MB/s.</p>
-<h3 id="猫、路由器"><a href="#猫、路由器" class="headerlink" title="猫、路由器"></a>猫、路由器</h3><p>modem光调制解调器</p>
-<p>光纤-猫（实现光通信）接到路由器wan端口，再由路由器的Lan端口接到其他终端，比如NAS，台式机等等。</p>
-<h3 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h3><p>千兆路由器模糊概念：</p>
+<h3 id="猫"><a href="#猫" class="headerlink" title="猫"></a>猫</h3><p>家里想要上网，可以没有路由器，但是一定不能没有Modem</p>
+<p>modem光调制解调器 </p>
+<p>光猫属于绑定设备，不能随意更换，如果光猫设备坏掉，自己买的光猫是不能直接使用的，需要到电信或者移动营业厅将原来的光猫解绑，绑定新买的光猫，才能使用</p>
+<p>光纤-ADSL猫（实现光通信）Lan端口接到路由器wan端口，再由路由器的Lan端口接到其他终端，比如NAS，台式机等等。Lan端口接到的其他设备都是分配的私网IP。</p>
+<p>光猫有两种模式：</p>
+<ul>
+<li><p>路由模式：电脑接上光猫的Lan口就可以上网了，光猫已经配置了PPPOE拨号，也开启了DHCP服务，自动获取了一个内网IP直接通过光猫NAT转换上网</p>
+</li>
+<li><p>桥接模式：电脑接上光猫的Lan口不能上网，需要电脑进行拨号连接才可以上网</p>
+</li>
+</ul>
+<h3 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h3><p>路由器属于非绑定设备，可以拿到任意地方更改设置</p>
+<p>千兆路由器模糊概念：</p>
 <p>1.wan端口是1Gbps</p>
 <p>2.lan端口是1Gbps</p>
 <p>3.支持802.11ac的1000Mbps无线</p>
-<p>市面上现在都是双频路由器，就是有2.4G和5G两个频段WiFi信号路由器，2.4G频段单根天线带宽是150Mbps，5G频段单根天线带宽433Mbps，如果是2根2.4G天线和2根5G（穿墙效果差）天线，WiFi传输带宽就可以达到1166Mbps。但是如果不使用局域网操作，直接在网上下载的速率肯定达不到125Mb/s，因为家用带宽100Mbps~12.5Mb/s，好处是</p>
+<p>市面上现在都是双频路由器，就是有2.4G和5G两个频段WiFi信号路由器，2.4G频段单根天线带宽是150Mbps，5G频段单根天线带宽433Mbps，如果是2根2.4G天线和2根5G（穿墙效果差）天线，WiFi传输带宽就可以达到1166Mbps。但是如果不使用局域网操作，直接在网上下载的速率肯定达不到125Mb/s，因为家用带宽100Mbps~12.5MB/s，好处是</p>
 <p>1.可以适当减小信号的衰减。</p>
 <p>2.搭建NAS，在局域网中设备之间用WiFi传输文件，速率可以达到125Mb/s。</p>
-<p>一般路由器端口wan端口是100Mbps，因为家用带宽就是100Mbps，上网下载速度最大只能12.5Mb/s。但是Lan端口就不同，如果是1Gbps，使用NAS（私有云），通过Lan端口连接NAS和台式机，两个设备在局域网下，设备之间传输文件的速率可以达到125Mb/s，和你办的带宽没有关系。如果路由器没有千兆Lan端口的话，可以考虑加一个交换机，光纤-猫-交换机（千兆端口）-路由器/NAS（群晖设备有两个Lan端口）或者就是上面说的换一个千兆WiFi路由器解决。</p>
+<p>一般路由器端口wan端口是100Mbps，因为家用带宽就是100Mbps，上网下载速度最大只能12.5MB/s。但是Lan端口就不同，如果是1Gbps，使用NAS（私有云），通过Lan端口连接NAS和台式机，两个设备在局域网下，设备之间传输文件的速率可以达到125MB/s，和你办的带宽没有关系。如果路由器没有千兆Lan端口的话，可以考虑加一个交换机，光纤-猫-交换机（千兆端口）-路由器/NAS（群晖设备有两个Lan端口）或者就是上面说的换一个千兆WiFi路由器解决。</p>
+<h3 id="两个路由器的连接方式"><a href="#两个路由器的连接方式" class="headerlink" title="两个路由器的连接方式"></a>两个路由器的连接方式</h3><p>参考：<a href="https://xw.qq.com/cmsid/20190607A0DZ2G00" target="_blank" rel="noopener">https://xw.qq.com/cmsid/20190607A0DZ2G00</a></p>
+<ul>
+<li>路由模式：主路由器的Wan口连接光猫，副路由器的Wan口连接路由器的Wan口</li>
+<li>交换模式：主路由器的Wan口连接光猫，副路由器的Lan口连接主路由器的Lan口</li>
+</ul>
 <h1 id="传输协议和接口"><a href="#传输协议和接口" class="headerlink" title="传输协议和接口"></a>传输协议和接口</h1><p>USB协议和雷电协议</p>
-<p>USB2.0    60Mb/s</p>
-<p>USB3.1 Gen1 俗称的USB3.0     640Mb/s     供电不足100W</p>
-<p>USB3.1 Gen2    1280Mb/s    供电可达100W</p>
-<p>USB3.2    2560Mb/s</p>
+<p>USB2.0    60MB/s</p>
+<p>USB3.1 Gen1 俗称的USB3.0     640MB/s     供电不足100W</p>
+<p>USB3.1 Gen2    1280MB/s    供电可达100W</p>
+<p>USB3.2    2560MB/s</p>
 <p>雷电3协议支持USB所有协议    5G/s</p>
 <p>TypeA接口支持USB3.1 Gen1和USB2.0协议</p>
 <p>TypeC接口支持USB2.0，USB3.1 Gen1和USB3.1 Gen2协议。如果有闪电标志即支持雷电3协议。</p>
 <p>举例：</p>
 <p><img src="./6.jpg" alt></p>
-<p>两个接口的传输速率都是640Mb/s，应该都是支持USB3.1 Gen1协议，小米充电器一般都是45W/65W，未达到100W。</p>
+<p>两个接口的传输速率都是640MB/s，应该都是支持USB3.1 Gen1协议，小米充电器一般都是45W/65W，未达到100W。</p>
 <p>第二个TypeC接口无法连接电源，不支持转接 DP, HDMI,VGA 等等接口输出视频，也就是说并不能用来连接外接显示器。但是TypeA接口的USB3.0协议可以转接视频输出。说明小米笔记本pro的第二个TypeC接口是阉割版的。</p>
 <p>目前手机上的TypeC接口支持的是USB2.0协议。</p>
 <h1 id="Windows-使用ssh-secure-file-transfer上传文件到linux服务器"><a href="#Windows-使用ssh-secure-file-transfer上传文件到linux服务器" class="headerlink" title="Windows 使用ssh secure file transfer上传文件到linux服务器"></a>Windows 使用ssh secure file transfer上传文件到linux服务器</h1><p>填写Host Name（你的服务器地址或域名），User Name（你的服务器用户名，注意你SSH使用root用户是否有权限登陆，或使用其他用户登陆），Port（你SSH登陆的端口，默认为22）。</p>
@@ -489,6 +508,12 @@
 <li>8Pin（可以拆开成4pin）口给CPU供电</li>
 <li>6pin口给GPU供电</li>
 <li>非常扁的接口给硬盘供电</li>
+</ul>
+<h1 id="VPN-amp-VPS"><a href="#VPN-amp-VPS" class="headerlink" title="VPN&amp;VPS"></a>VPN&amp;VPS</h1><h3 id="翻墙原理GFW"><a href="#翻墙原理GFW" class="headerlink" title="翻墙原理GFW"></a>翻墙原理GFW</h3><ul>
+<li><p>Dns劫持：站在用户和dns服务器之间，破坏它们的正常通讯，并向用户回传一个假ip。用户拿不到真正的ip，自然也就访问不到本想访问的网站了。</p>
+</li>
+<li><p>Ip封锁：直接锁住了访问目标网站的去路，用户发往被封锁ip的任何数据都会被墙截断。</p>
+</li>
 </ul>
 
       
@@ -605,7 +630,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -616,7 +641,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -651,7 +676,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是环境变量？"><span class="nav-number">1.</span> <span class="nav-text">什么是环境变量？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#用户变量"><span class="nav-number">1.1.</span> <span class="nav-text">用户变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统变量"><span class="nav-number">1.2.</span> <span class="nav-text">系统变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重要系统变量介绍"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">重要系统变量介绍</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境变量的应用实例"><span class="nav-number">1.2.1.</span> <span class="nav-text">环境变量的应用实例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#索引文件夹"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">索引文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打开应用"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">打开应用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.2.2.</span> <span class="nav-text">总结</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#鼠标接收器出现问题？"><span class="nav-number">2.</span> <span class="nav-text">鼠标接收器出现问题？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Adobe-Acrobat-DC"><span class="nav-number">3.</span> <span class="nav-text">Adobe Acrobat DC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#photoshop"><span class="nav-number">4.</span> <span class="nav-text">photoshop</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IP"><span class="nav-number">5.</span> <span class="nav-text">IP</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#动态域名解析"><span class="nav-number">5.0.0.0.1.</span> <span class="nav-text">动态域名解析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#端口映射"><span class="nav-number">5.0.0.0.2.</span> <span class="nav-text">端口映射</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#路由器、猫、网络带宽、NAS"><span class="nav-number">6.</span> <span class="nav-text">路由器、猫、网络带宽、NAS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#家用网络带宽"><span class="nav-number">6.0.0.1.</span> <span class="nav-text">家用网络带宽</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#猫、路由器"><span class="nav-number">6.0.1.</span> <span class="nav-text">猫、路由器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由器"><span class="nav-number">6.0.2.</span> <span class="nav-text">路由器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#传输协议和接口"><span class="nav-number">7.</span> <span class="nav-text">传输协议和接口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows-使用ssh-secure-file-transfer上传文件到linux服务器"><span class="nav-number">8.</span> <span class="nav-text">Windows 使用ssh secure file transfer上传文件到linux服务器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置一台主机（有想法）"><span class="nav-number">9.</span> <span class="nav-text">配置一台主机（有想法）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#CPU-逻辑运算"><span class="nav-number">9.0.0.0.1.</span> <span class="nav-text">CPU:逻辑运算</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#主板：华硕、技嘉和微星-MSI"><span class="nav-number">9.0.0.0.2.</span> <span class="nav-text">主板：华硕、技嘉和微星(MSI)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#显卡：全球能设计显卡芯片的只有Intel、AMD、Nvidia三家公司，Intel主要设计CPU的核心显卡，Nvidia和AMD设计独立显卡，AMD和Nvidia只负责造显卡芯片，显卡由签约制造商生产，比如华硕、技嘉，微星（MSI）"><span class="nav-number">9.0.0.0.3.</span> <span class="nav-text">显卡：全球能设计显卡芯片的只有Intel、AMD、Nvidia三家公司，Intel主要设计CPU的核心显卡，Nvidia和AMD设计独立显卡，AMD和Nvidia只负责造显卡芯片，显卡由签约制造商生产，比如华硕、技嘉，微星（MSI）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#硬盘"><span class="nav-number">9.0.0.0.4.</span> <span class="nav-text">硬盘</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#电源"><span class="nav-number">9.0.0.0.5.</span> <span class="nav-text">电源</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#机箱"><span class="nav-number">9.0.0.0.6.</span> <span class="nav-text">机箱</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#散热器"><span class="nav-number">9.0.0.0.7.</span> <span class="nav-text">散热器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#装机顺序"><span class="nav-number">9.0.0.0.8.</span> <span class="nav-text">装机顺序</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是环境变量？"><span class="nav-number">1.</span> <span class="nav-text">什么是环境变量？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#用户变量"><span class="nav-number">1.1.</span> <span class="nav-text">用户变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统变量"><span class="nav-number">1.2.</span> <span class="nav-text">系统变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重要系统变量介绍"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">重要系统变量介绍</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#环境变量的应用实例"><span class="nav-number">1.2.1.</span> <span class="nav-text">环境变量的应用实例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#索引文件夹"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">索引文件夹</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打开应用"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">打开应用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.2.2.</span> <span class="nav-text">总结</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#鼠标接收器出现问题？"><span class="nav-number">2.</span> <span class="nav-text">鼠标接收器出现问题？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Adobe-Acrobat-DC"><span class="nav-number">3.</span> <span class="nav-text">Adobe Acrobat DC</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#photoshop"><span class="nav-number">4.</span> <span class="nav-text">photoshop</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IP"><span class="nav-number">5.</span> <span class="nav-text">IP</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#动态域名解析"><span class="nav-number">5.0.0.0.1.</span> <span class="nav-text">动态域名解析</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#端口映射"><span class="nav-number">5.0.0.0.2.</span> <span class="nav-text">端口映射</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务器和普通电脑"><span class="nav-number">6.</span> <span class="nav-text">服务器和普通电脑</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#同一个局域网下电脑之间相互访问"><span class="nav-number">6.1.</span> <span class="nav-text">同一个局域网下电脑之间相互访问</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#路由器、猫、网络带宽、NAS"><span class="nav-number">7.</span> <span class="nav-text">路由器、猫、网络带宽、NAS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#家用网络带宽"><span class="nav-number">7.0.0.1.</span> <span class="nav-text">家用网络带宽</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#猫"><span class="nav-number">7.0.1.</span> <span class="nav-text">猫</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#路由器"><span class="nav-number">7.0.2.</span> <span class="nav-text">路由器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#两个路由器的连接方式"><span class="nav-number">7.0.3.</span> <span class="nav-text">两个路由器的连接方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#传输协议和接口"><span class="nav-number">8.</span> <span class="nav-text">传输协议和接口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows-使用ssh-secure-file-transfer上传文件到linux服务器"><span class="nav-number">9.</span> <span class="nav-text">Windows 使用ssh secure file transfer上传文件到linux服务器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置一台主机（有想法）"><span class="nav-number">10.</span> <span class="nav-text">配置一台主机（有想法）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#CPU-逻辑运算"><span class="nav-number">10.0.0.0.1.</span> <span class="nav-text">CPU:逻辑运算</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#主板：华硕、技嘉和微星-MSI"><span class="nav-number">10.0.0.0.2.</span> <span class="nav-text">主板：华硕、技嘉和微星(MSI)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#显卡：全球能设计显卡芯片的只有Intel、AMD、Nvidia三家公司，Intel主要设计CPU的核心显卡，Nvidia和AMD设计独立显卡，AMD和Nvidia只负责造显卡芯片，显卡由签约制造商生产，比如华硕、技嘉，微星（MSI）"><span class="nav-number">10.0.0.0.3.</span> <span class="nav-text">显卡：全球能设计显卡芯片的只有Intel、AMD、Nvidia三家公司，Intel主要设计CPU的核心显卡，Nvidia和AMD设计独立显卡，AMD和Nvidia只负责造显卡芯片，显卡由签约制造商生产，比如华硕、技嘉，微星（MSI）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#硬盘"><span class="nav-number">10.0.0.0.4.</span> <span class="nav-text">硬盘</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#电源"><span class="nav-number">10.0.0.0.5.</span> <span class="nav-text">电源</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#机箱"><span class="nav-number">10.0.0.0.6.</span> <span class="nav-text">机箱</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#散热器"><span class="nav-number">10.0.0.0.7.</span> <span class="nav-text">散热器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#装机顺序"><span class="nav-number">10.0.0.0.8.</span> <span class="nav-text">装机顺序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VPN-amp-VPS"><span class="nav-number">11.</span> <span class="nav-text">VPN&amp;VPS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#翻墙原理GFW"><span class="nav-number">11.0.1.</span> <span class="nav-text">翻墙原理GFW</span></a></li></ol></li></div>
             
 
           </div>
