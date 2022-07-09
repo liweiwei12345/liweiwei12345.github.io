@@ -1,59 +1,369 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[清华园讲座]]></title>
-    <url>%2F2019%2F12%2F20%2Fspeech%2F</url>
-    <content type="text"><![CDATA[讲座更新中]]></content>
+    <title>GitHub+Hexo 搭建个人主页</title>
+    <url>/2019/08/29/Hexo+Github/</url>
+    <content><![CDATA[<h1 id="搭建过程中遇到的问题和解决方案（基于win10）"><a href="#搭建过程中遇到的问题和解决方案（基于win10）" class="headerlink" title="搭建过程中遇到的问题和解决方案（基于win10）"></a>搭建过程中遇到的问题和解决方案（基于win10）</h1><p><strong>说明：整套搭建是参考<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">吴润·RunDouble</a></strong></p>
+<h2 id="1-Sublime-Text或者UltraEdit下载安装"><a href="#1-Sublime-Text或者UltraEdit下载安装" class="headerlink" title="1. Sublime Text或者UltraEdit下载安装"></a>1. Sublime Text或者UltraEdit下载安装</h2><ul>
+<li>一款用于代码、标记和散文的精致文本编辑器，后续的文件编辑用该软件很方便，推荐下载</li>
+</ul>
+<p><a href="https://www.sublimetext.com/3" target="_blank" rel="noopener">Download - Sublime Text</a></p>
+<p><a href="https://pan.baidu.com/s/11NF30WgbwwGgfL8vf6hDcQ" target="_blank" rel="noopener">Download-UltraEdit</a><br>提取码：hqy6 </p>
+<h2 id="2-注册一个GitHub账户"><a href="#2-注册一个GitHub账户" class="headerlink" title="2. 注册一个GitHub账户"></a>2. 注册一个GitHub账户</h2><ul>
+<li>新建一个仓库（repository)：仓库名设置为    用户名.github.io</li>
+</ul>
+<h2 id="3-安装Git"><a href="#3-安装Git" class="headerlink" title="3. 安装Git"></a>3. 安装Git</h2><h3 id="3-1-下载安装Git，测试git是否安装成功"><a href="#3-1-下载安装Git，测试git是否安装成功" class="headerlink" title="3.1 下载安装Git，测试git是否安装成功"></a>3.1 下载安装Git，测试git是否安装成功</h3><p><a href="https://link.zhihu.com/?target=https%3A//git-scm.com/download/win" target="_blank" rel="noopener">Git官网</a> </p>
+<p><img src="/images/git%E6%B5%8B%E8%AF%95%E6%88%90%E5%8A%9F.JPG" alt></p>
+<h3 id="3-2-Git与GitHub账号绑定（实现远程仓库和本地仓库的连接）"><a href="#3-2-Git与GitHub账号绑定（实现远程仓库和本地仓库的连接）" class="headerlink" title="3.2 Git与GitHub账号绑定（实现远程仓库和本地仓库的连接）"></a>3.2 Git与GitHub账号绑定（实现远程仓库和本地仓库的连接）</h3><ul>
+<li><strong>配置用户信息</strong>: </li>
+</ul>
+<p>（1）git config –global user.name “GitHub用户名”</p>
+<p>（2）git config –global user.email “GitHub注册邮箱”</p>
+<ul>
+<li><strong>生成ssh密钥文件（实现每次推送不用输密码,建立本地和远程的桥梁）：</strong></li>
+</ul>
+<p>（1）ssh-keygen -t rsa -C “GitHub注册邮箱”</p>
+<p><strong>问题：</strong>C:\Users\Rescue\ .ssh文件夹如果只有两个文件，不包括known_hosts时，说明你直接回车，没有按照提示输入’yes’（因为这个我查了半天，我太愚蠢了😂）</p>
+<p><img src="/images/git%E9%85%8D%E7%BD%AE%E5%AF%86%E9%92%A5.JPG" alt></p>
+<p>（2）打开GitHub_Setting_keys页面，新建new SSH Key，标题可以不填，内容是复制‘id_rsa_pub’文件内容</p>
+<ul>
+<li><strong>测试密钥设置成功</strong></li>
+</ul>
+<p><img src="/images/%E8%A7%A3%E5%86%B3%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98.PNG" alt></p>
+<h2 id="4-安装Hexo"><a href="#4-安装Hexo" class="headerlink" title="4. 安装Hexo"></a>4. 安装Hexo</h2><h3 id="4-1-准备工作"><a href="#4-1-准备工作" class="headerlink" title="4.1 准备工作"></a>4.1 准备工作</h3><p>（1）安装<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a>，配置Hexo的环境变量</p>
+<p>（2）检测安装是否成功，成功时如下图：</p>
+<p><img src="/images/%E6%B5%8B%E8%AF%95node.js%E5%AE%89%E8%A3%85%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F.JPG" alt></p>
+<h3 id="4-2-开始安装"><a href="#4-2-开始安装" class="headerlink" title="4.2 开始安装"></a>4.2 开始安装</h3><p>（1）在电脑上创建一个文件夹（Hexo，Blog内容，Github远程仓库都存放在里面）</p>
+<p>（2）使用npm命令安装Hexo  </p>
+<p>在当前文件夹里面，输入npm install -g hexo-cli，如下图:</p>
+<p><img src="/images/%E5%AE%89%E8%A3%85hexo.PNG" alt></p>
+<p>（3）初始化博客</p>
+<p>git bash下输入 hexo init blog，如下图</p>
+<p><img src="/images/%E5%88%9D%E5%A7%8B%E5%8C%96%E5%8D%9A%E5%AE%A2.PNG" alt></p>
+<h3 id="4-3-推送网站"><a href="#4-3-推送网站" class="headerlink" title="4.3 推送网站"></a>4.3 推送网站</h3><p>（1）站点配置文件</p>
+<p><img src="/images/%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE.JPG" alt></p>
+<p>（2）保存站点配置文件</p>
+<p><strong>问题</strong></p>
+<p><img src="/images/git%E9%83%A8%E7%BD%B2%E6%8F%92%E4%BB%B6.PNG" alt></p>
+<p><strong>解决</strong></p>
+<p>输入：npm install <a href="mailto:hexo-renderer-marked@2.0.0" target="_blank" rel="noopener">hexo-renderer-marked@2.0.0</a><img src="/images/%E4%BF%9D%E5%AD%98%E9%85%8D%E7%BD%AE%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF-%E8%A7%A3%E5%86%B3.PNG" alt></p>
+<p>（3）测试博客上线</p>
+<p>hexo clean</p>
+<p>hexo g</p>
+<p>hexo d</p>
+<p>（4）打开网页输入    用户名.github.io</p>
+<h2 id="5-主题设置"><a href="#5-主题设置" class="headerlink" title="5. 主题设置"></a>5. 主题设置</h2><h3 id="5-1-Next主题下载"><a href="#5-1-Next主题下载" class="headerlink" title="5.1 Next主题下载"></a>5.1 Next主题下载</h3><p><a href="https://www.jianshu.com/p/b20fc983005f" target="_blank" rel="noopener">https://www.jianshu.com/p/b20fc983005f</a></p>
+<h3 id="5-2-Next主题配置"><a href="#5-2-Next主题配置" class="headerlink" title="5.2 Next主题配置"></a>5.2 Next主题配置</h3><p>（1）about链接</p>
+<p>需要在根目录下的source(_posts)文件中新建文件夹<strong>about</strong>,里面创建<strong>index.md</strong>文件</p>
+<p>（2）头像上传</p>
+<p>需要在根目录下的source(_posts)文件中新建文件夹”uploads”,里面放入照片</p>
+<p><a href="https://www.jianshu.com/p/3a05351a37dc" target="_blank" rel="noopener">https://www.jianshu.com/p/3a05351a37dc</a></p>
+<p>（3）背景设置</p>
+<p><a href="https://blog.csdn.net/wang631106979/article/details/51375184" target="_blank" rel="noopener">https://blog.csdn.net/wang631106979/article/details/51375184</a></p>
+<p>（4）开启搜索</p>
+<p><a href="https://yashuning.github.io/2018/06/29/hexo-Next-主题添加搜索功能" target="_blank" rel="noopener">https://yashuning.github.io/2018/06/29/hexo-Next-主题添加搜索功能</a></p>
+<h2 id="6-域名更换-建议全部搭建完没问题更换"><a href="#6-域名更换-建议全部搭建完没问题更换" class="headerlink" title="6. 域名更换(建议全部搭建完没问题更换)"></a>6. 域名更换(建议全部搭建完没问题更换)</h2><h3 id="6-1-购买域名"><a href="#6-1-购买域名" class="headerlink" title="6.1 购买域名"></a>6.1 购买域名</h3><p><a href="https://www.aliyun.com/" target="_blank" rel="noopener">阿里云</a></p>
+<h3 id="6-2-域名解析"><a href="#6-2-域名解析" class="headerlink" title="6.2 域名解析"></a>6.2 域名解析</h3><p><a href="https://cloud.tencent.com/developer/article/1423783" target="_blank" rel="noopener">Y大宽</a></p>
+<h2 id="7-额外出现的问题"><a href="#7-额外出现的问题" class="headerlink" title="7. 额外出现的问题"></a>7. 额外出现的问题</h2><h3 id="7-1-Fatal-TaskCanceldException-encountered"><a href="#7-1-Fatal-TaskCanceldException-encountered" class="headerlink" title="7.1 Fatal: TaskCanceldException encountered"></a>7.1 Fatal: TaskCanceldException encountered</h3><p>上传远程仓库时突然需要输用户名和密码</p>
+<p>根目录下<strong>config.yml</strong>文件中修改<strong>repo</strong>    <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:liweiwei12345/liweiwei12345.github.io.git</p>
+<p><a href="https://blog.csdn.net/hhgggggg/article/details/77853665" target="_blank" rel="noopener">https://blog.csdn.net/hhgggggg/article/details/77853665</a></p>
+<h3 id="7-2-ping-github-请求超时"><a href="#7-2-ping-github-请求超时" class="headerlink" title="7.2 ping github 请求超时"></a>7.2 ping github 请求超时</h3><p>（1）首先确定github是否ping的通，是否是端口的问题<a href="https://blog.csdn.net/u010377383/article/details/79365049" target="_blank" rel="noopener">https://blog.csdn.net/u010377383/article/details/79365049</a></p>
+<p>（2）如果是<strong>翻墙</strong>的原因<a href="https://blog.csdn.net/sdta25196/article/details/80203152" target="_blank" rel="noopener">https://blog.csdn.net/sdta25196/article/details/80203152</a></p>
+<p>如果翻墙失败了，那就将当时翻墙的操作给删除就可以了</p>
+<p><strong>小建议：先用管理员权限打开记事本，然后将hosts文件里的内容复制进去，进行修改，最后替换它</strong></p>
+]]></content>
       <categories>
-        <category>speech</category>
+        <category>GitHub</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[高等数值分析]]></title>
-    <url>%2F2019%2F12%2F13%2Fgaozhi%2F</url>
-    <content type="text"><![CDATA[高等数值分析第一次实验（Word编写） 高等数值分析第二次实验（Latex编写）]]></content>
+    <title>高等数值分析</title>
+    <url>/2019/12/13/gaozhi/</url>
+    <content><![CDATA[<p>高等数值分析第一次实验（Word编写）</p>
+
+
+	<div class="row">
+    <embed src="./gaozhi1.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<p>高等数值分析第二次实验（Latex编写）</p>
+
+
+	<div class="row">
+    <embed src="./gaozhi2.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+
+
+	<div class="row">
+    <embed src="http://7xov2f.com1.z0.glb.clouddn.com/bash_freshman.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+
+
+	<div class="row">
+    <embed src="http://7xov2f.com1.z0.glb.clouddn.com/bash_freshman.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+
+
+]]></content>
       <categories>
         <category>source</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Matlab]]></title>
-    <url>%2F2019%2F11%2F25%2Fmatlab%2F</url>
-    <content type="text"><![CDATA[1.输入输出参量可变的函数实现方法1：说明：nargin,nargout函数，建议里面用为else if省去许多end 123clc;clear;close;a=9;b=200;c=30;[max,num]=maxium(a,b,c) 1234567891011121314151617181920212223242526function [first,second]=maxium(a,b,c)switch nargin case 3 %相当于一个输入变量为3的函数 if a&gt;b max="a";num=a; else max="b";num=b; end if num&lt;c max="c";num=c; end case 2 %相当于一个输入变量为2的函数 if a&gt;b max="a";num=a; else max="b",num=b; endendswitch nargout case 2 first=max; %相当于一个输出变量为2的函数 second=num; case 1 first=num; %相当于一个输出变量为1的函数endend 1234567891011121314151617181920212223242526function [first,second]=maxium(a,b,c)if nargin==3 %相当于一个输入变量为3的函数 if a&gt;b max="a";num=a; else max="b";num=b; end if num&lt;c max="c";num=c; endendif nargin==2 %相当于一个输入变量为2的函数 if a&gt;b max="a";num=a; else max="b",num=b; endendif nargout==2 %相当于一个输出变量为2的函数 first=max; second=num;endif nargout==1 %相当于一个输出变量为1的函数 first=num; endend 实现方法2：说明：使用varargin,varargout函数 123clc;clear;close;a=9;b=200;c=30;[max,num]=maxium_1(a,b,c) 1234567891011121314151617181920212223242526272829function varargout = maxium_1(varargin)% varargin=[a,b,c];% varargout=[max,num];a=varargin&#123;1&#125;;b=varargin&#123;2&#125;;c=varargin&#123;3&#125;;%输入变量if nargin==3 %相当于一个输入变量为3的函数 if a&gt;b max="a";num=a; elseif a&lt;b max="b";num=b; elseif num&lt;c max="c";num=c; endendif nargin==2 %相当于一个输入变量为2的函数 if a&gt;b max="a";num=a; elseif a&lt;b max="b",num=b; endend%输出变量if nargout==2 varargout&#123;1&#125;=max; varargout&#123;2&#125;=num;elseif nargout==1 varargout&#123;1&#125;=num;endend 2.元胞数组的应用{} 和（）的区别说明：这里可以解释上面，因为varargin本身是个元胞数组，varargin用{}直接引用a,b,c里面的值（数据类型是数值型） 举例： 123456clc;clear;close;data1_1=&#123;2,3,4;1,1,1&#125;;data2_1=&#123;"a","b","c"&#125;;data1 = &#123;data1_1,"hello";data2_1,3&#125;;data1(2);[A,B,C]=data1&#123;2&#125;&#123;1,:&#125;;]]></content>
+    <title>学习资源分享</title>
+    <url>/2019/09/01/Source/</url>
+    <content><![CDATA[<h1 id="清华大学实验安全教育考试题库"><a href="#清华大学实验安全教育考试题库" class="headerlink" title="清华大学实验安全教育考试题库"></a>清华大学实验安全教育考试题库</h1><p>链接：<a href="https://pan.baidu.com/s/1tYtOwMwS3_OCNdlHnomFMA" target="_blank" rel="noopener">https://pan.baidu.com/s/1tYtOwMwS3_OCNdlHnomFMA</a><br>提取码：dale </p>
+<h1 id="电子枪与离子束技术"><a href="#电子枪与离子束技术" class="headerlink" title="电子枪与离子束技术"></a>电子枪与离子束技术</h1><p>张以忱编著    出版社：冶金工业出版社</p>
+<p>链接：<a href="https://pan.baidu.com/s/1w1eSFhPQmgxBg4zw_5-gJA" target="_blank" rel="noopener">https://pan.baidu.com/s/1w1eSFhPQmgxBg4zw_5-gJA</a><br>提取码：97qj </p>
+<h1 id="UltraEdit"><a href="#UltraEdit" class="headerlink" title="UltraEdit"></a>UltraEdit</h1><p>简介： <strong>UltraEdit</strong>（原名UltraEdit-32）是跨平台的一套商业性文本编辑器，由IDM Computer Solutions在1994年创造。UltraEdit有很强大的编程功能，支持宏、语法高亮度显示和正则表达式等功能。文件在标签中可以被浏览和编辑。安装需要约30 MB的磁盘空间。UltraEdit也支持以Unicode和hex编辑的模式 。</p>
+<p>链接：<a href="https://pan.baidu.com/s/11NF30WgbwwGgfL8vf6hDcQ" target="_blank" rel="noopener">https://pan.baidu.com/s/11NF30WgbwwGgfL8vf6hDcQ</a><br>提取码：hqy6 </p>
+]]></content>
       <categories>
-        <category>Matlab</category>
+        <category>source</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Python入门]]></title>
-    <url>%2F2019%2F11%2F24%2Fpython%2F</url>
-    <content type="text"><![CDATA[Python输入函数input1234567891011121314year,month,day = input("你的出生年月日:").split()age = 2020-int(year)if int(month) &lt; 11: age = ageelse: if int(month) == 11: if int(day) &lt; 24: age = age else: age = age-1 else: age = age-1print("你的年龄是:&#123;&#125;".format(age))input("") 说明： 1.不能在iuput里面定义数据类型，例如input(int,”…”) 2.缩进非常重要，她表示的是循环、条件等的作用域，是Python精简有层次的灵魂 基础知识一个小游戏： 123456789101112131415161718192021222324252627282930#调用random模块import randommy_number = random.randint(1,10)temp = input("请输入我心里想的一个数字：")guess = int(temp)if my_number == guess: print("""哇，你太棒了！好厉害呢""")else: if my_number &gt; guess: print("哥，你猜的比我小哦") else: print("大了大了，哥")i=0while (guess != my_number) and (i &lt; 3): i = i+1 temp = input("请在输入一次吧，你还有"+str(4-i)+"次机会") guess = int(temp) if my_number == guess: print("""哇，你太棒了！好厉害呢 """) else: if my_number &gt; guess: print("你猜的比我小哦") else: print("大了大了")input("") matlab中： 123i=3;disp("你还有"+num2str(i)+"次机会") %数据类型转换 数据类型整型(整数) 浮点型(小数) 布尔类型：true &amp; false 判断类型格式用type() class() 字符型：python(str) matlab(char) 常用操作符算数操作符(+ - * / // % **) 比较操作符(&gt; &gt;= &lt; &lt;= == !=) 逻辑操作符(and or not) for循环和range()range(1,10,2) 1,3,5,7,9 for i in range(10) 表示循环10次，即使在循环中i的值发生变化，循环开始时i依然是按照i=0，1，2，3，…，9取值 123456for i in range(10): if i%2 != 0: print(i) continue #满足条件直接重新循环，不用执行下面语句，其用法与else类似 i += 2 print(i) 123456for i in range(10): if i%2 != 0: print(i) else: i += 2 print(i) 第五章 列表、元组和字符python是没有数组的，因为数组的基本要求是放在一起的数据必须是类型一致的，但是python的变量是没有数据类型的。 列表列表中的的元组类型是可以任意的 1mix = [1,'小甲鱼'，3.14，[1，2，3]] 向列表中添加元素 大多数编程语言的顺序索引，都是从0开始 12number.insert(1,0) %把0元素插入到数组第二个位置number.extend([1,2,3]) 从列表中删除元素 1234567举例:name= [1，'鸡蛋'，'鸭蛋'，'鹅蛋'，'鸟蛋']name.remove('鸟蛋')del name[2] %删除数组name的第3个元素'鹅蛋'注意，del是一个语句，不是一个列表的方法，所以不必在后面加上小括号（）name.pop() %默认弹出列表中的最后一个元素'鸟蛋'name.pop(2) %弹出列表中的第3个元素'鸭蛋'name %name列表中只有name=[1,'鸡蛋','鹅蛋'] 列表分片 12345list=[1,2,3,4,5,6,7,8,9]list[0:3] %输出的是1，2，3注意：左边是开始的位置，右边是结束的位置，但是结束的位置元素是不包含的，因此4不在其中list[::2] %输出的是1，3，5，7，9list[::-1] %输出的是9，8，7，6，5，4，3，2，1 引用列表中的元素 123name[1] %输出的是'鸡蛋'list2=[1,'小明',['西瓜'，3]，5，'小红']list2[2][0] %输出的是'西瓜' 列表拷贝 123真正的拷贝是使用分片的方法list1=name[:]list2=name %只是向同一个列表增加一个新的标签，如果原列表发生变化，赋值的列表也会发生变化 元组元组中的元素不能随意修改 字符串序列第六章：函数]]></content>
+    <title>Python入门</title>
+    <url>/2019/11/24/python/</url>
+    <content><![CDATA[<h1 id="Python输入函数input"><a href="#Python输入函数input" class="headerlink" title="Python输入函数input"></a>Python输入函数input</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">year,month,day = input(<span class="string">"你的出生年月日:"</span>).split()</span><br><span class="line">age = <span class="number">2020</span>-int(year)</span><br><span class="line"><span class="keyword">if</span> int(month) &lt; <span class="number">11</span>:</span><br><span class="line">    age = age</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">if</span> int(month) == <span class="number">11</span>:</span><br><span class="line">        <span class="keyword">if</span> int(day) &lt; <span class="number">24</span>:</span><br><span class="line">            age = age</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            age = age<span class="number">-1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        age = age<span class="number">-1</span></span><br><span class="line">print(<span class="string">"你的年龄是:&#123;&#125;"</span>.format(age))</span><br><span class="line">input(<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+
+<p>说明：</p>
+<p>1.不能在iuput里面定义数据类型，例如input(int,”…”)</p>
+<p>2.缩进非常重要，她表示的是循环、条件等的作用域，是Python精简有层次的灵魂</p>
+<h1 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h1><p>一个小游戏：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#调用random模块</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line">my_number = random.randint(<span class="number">1</span>,<span class="number">10</span>)</span><br><span class="line">temp = input(<span class="string">"请输入我心里想的一个数字："</span>)</span><br><span class="line">guess = int(temp)</span><br><span class="line"><span class="keyword">if</span> my_number == guess:</span><br><span class="line">    print(<span class="string">"""</span></span><br><span class="line"><span class="string">哇，你太棒了！好厉害呢</span></span><br><span class="line"><span class="string">"""</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="keyword">if</span> my_number &gt; guess:</span><br><span class="line">        print(<span class="string">"哥，你猜的比我小哦"</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">"大了大了，哥"</span>)</span><br><span class="line">i=<span class="number">0</span></span><br><span class="line"><span class="keyword">while</span> (guess != my_number) <span class="keyword">and</span> (i &lt; <span class="number">3</span>):</span><br><span class="line">    i = i+<span class="number">1</span></span><br><span class="line">    temp = input(<span class="string">"请在输入一次吧，你还有"</span>+str(<span class="number">4</span>-i)+<span class="string">"次机会"</span>)</span><br><span class="line">    guess = int(temp)</span><br><span class="line">    <span class="keyword">if</span> my_number == guess:</span><br><span class="line">        print(<span class="string">"""</span></span><br><span class="line"><span class="string">哇，你太棒了！</span></span><br><span class="line"><span class="string">好厉害呢</span></span><br><span class="line"><span class="string">            """</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">if</span> my_number &gt; guess:</span><br><span class="line">            print(<span class="string">"你猜的比我小哦"</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            print(<span class="string">"大了大了"</span>)</span><br><span class="line">input(<span class="string">""</span>)</span><br></pre></td></tr></table></figure>
+
+<p>matlab中：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="built_in">i</span>=<span class="number">3</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">disp</span>(<span class="string">"你还有"</span>+num2str(<span class="built_in">i</span>)+<span class="string">"次机会"</span>)	<span class="comment">%数据类型转换</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>整型(整数)</p>
+<p>浮点型(小数)</p>
+<p>布尔类型：true &amp; false</p>
+<p>判断类型格式用type()    class()</p>
+<p>字符型：python(str)    matlab(char)</p>
+<h2 id="常用操作符"><a href="#常用操作符" class="headerlink" title="常用操作符"></a>常用操作符</h2><p>算数操作符(+ - * / // % **)    比较操作符(&gt; &gt;= &lt; &lt;= == !=)    逻辑操作符(and or not)</p>
+<h2 id="for循环和range"><a href="#for循环和range" class="headerlink" title="for循环和range()"></a>for循环和range()</h2><p>range(1,10,2)    1,3,5,7,9</p>
+<p>for i in range(10) 表示循环10次，即使在循环中i的值发生变化，循环开始时i依然是按照i=0，1，2，3，…，9取值</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">if</span> i%<span class="number">2</span> != <span class="number">0</span>:</span><br><span class="line">        print(i)</span><br><span class="line">        <span class="keyword">continue</span>	<span class="comment">#满足条件直接重新循环，不用执行下面语句，其用法与else类似</span></span><br><span class="line">    i += <span class="number">2</span></span><br><span class="line">    print(i)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    <span class="keyword">if</span> i%<span class="number">2</span> != <span class="number">0</span>:</span><br><span class="line">        print(i)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        i += <span class="number">2</span></span><br><span class="line">        print(i)</span><br></pre></td></tr></table></figure>
+
+<h2 id="第五章-列表、元组和字符"><a href="#第五章-列表、元组和字符" class="headerlink" title="第五章    列表、元组和字符"></a>第五章    列表、元组和字符</h2><p>python是没有数组的，因为数组的基本要求是放在一起的数据必须是类型一致的，但是python的变量是没有数据类型的。</p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>列表中的的元组类型是可以任意的</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">mix = [<span class="number">1</span>,<span class="string">'小甲鱼'</span>，<span class="number">3.14</span>，[<span class="number">1</span>，<span class="number">2</span>，<span class="number">3</span>]]</span><br></pre></td></tr></table></figure>
+
+<p>向列表中添加元素</p>
+<p>大多数编程语言的顺序索引，都是从0开始</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">number.insert(<span class="number">1</span>,<span class="number">0</span>)	%把<span class="number">0</span>元素插入到数组第二个位置</span><br><span class="line">number.extend([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+
+<p>从列表中删除元素</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">举例:name= [<span class="number">1</span>，<span class="string">'鸡蛋'</span>，<span class="string">'鸭蛋'</span>，<span class="string">'鹅蛋'</span>，<span class="string">'鸟蛋'</span>]</span><br><span class="line">name.remove(<span class="string">'鸟蛋'</span>)</span><br><span class="line"><span class="keyword">del</span> name[<span class="number">2</span>]	%删除数组name的第<span class="number">3</span>个元素<span class="string">'鹅蛋'</span></span><br><span class="line">注意，<span class="keyword">del</span>是一个语句，不是一个列表的方法，所以不必在后面加上小括号（）</span><br><span class="line">name.pop()	%默认弹出列表中的最后一个元素<span class="string">'鸟蛋'</span></span><br><span class="line">name.pop(<span class="number">2</span>)	%弹出列表中的第<span class="number">3</span>个元素<span class="string">'鸭蛋'</span></span><br><span class="line">name		%name列表中只有name=[<span class="number">1</span>,<span class="string">'鸡蛋'</span>,<span class="string">'鹅蛋'</span>]</span><br></pre></td></tr></table></figure>
+
+<p>列表分片</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">list=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]</span><br><span class="line">list[<span class="number">0</span>:<span class="number">3</span>]	%输出的是<span class="number">1</span>，<span class="number">2</span>，<span class="number">3</span></span><br><span class="line">注意：左边是开始的位置，右边是结束的位置，但是结束的位置元素是不包含的，因此<span class="number">4</span>不在其中</span><br><span class="line">list[::<span class="number">2</span>]	%输出的是<span class="number">1</span>，<span class="number">3</span>，<span class="number">5</span>，<span class="number">7</span>，<span class="number">9</span></span><br><span class="line">list[::<span class="number">-1</span>]	%输出的是<span class="number">9</span>，<span class="number">8</span>，<span class="number">7</span>，<span class="number">6</span>，<span class="number">5</span>，<span class="number">4</span>，<span class="number">3</span>，<span class="number">2</span>，<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>引用列表中的元素</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">name[<span class="number">1</span>]		%输出的是<span class="string">'鸡蛋'</span></span><br><span class="line">list2=[<span class="number">1</span>,<span class="string">'小明'</span>,[<span class="string">'西瓜'</span>，<span class="number">3</span>]，<span class="number">5</span>，<span class="string">'小红'</span>]</span><br><span class="line">list2[<span class="number">2</span>][<span class="number">0</span>]	%输出的是<span class="string">'西瓜'</span></span><br></pre></td></tr></table></figure>
+
+<p>列表拷贝</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">真正的拷贝是使用分片的方法</span><br><span class="line">list1=name[:]</span><br><span class="line">list2=name	%只是向同一个列表增加一个新的标签，如果原列表发生变化，赋值的列表也会发生变化</span><br></pre></td></tr></table></figure>
+
+<h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3><p>元组中的元素不能随意修改</p>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h3 id="序列"><a href="#序列" class="headerlink" title="序列"></a>序列</h3><h1 id="第六章：函数"><a href="#第六章：函数" class="headerlink" title="第六章：函数"></a>第六章：函数</h1>]]></content>
       <categories>
         <category>python</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[计算机常见问题]]></title>
-    <url>%2F2019%2F11%2F23%2Fwindows-question%2F</url>
-    <content type="text"><![CDATA[什么是环境变量？用户变量当前用户可以对其进行添加、修改或删除 系统变量只有管理员才能添加、修改或删除，由windows定义并应用到所有系统用户 重要系统变量介绍 NUMBER_OF_PROCESSORS变量：代表用户电脑中逻辑处理器的数量 OS变量：表面用户的操作系统 Path变量：规定操作系统在指定的文件路径中查看可执行文件 环境变量的应用实例索引文件夹在用户环境变量中，随意设置一个变量名，然后把路径指定到你的文件夹中或者某个文件（exe)中，接着在运行中（win+r)中输入%变量名%,便可以直接进入文件夹中或者运行该程序 打开应用在用户环境变量Path中添加应用的目录即可 总结 在用户环境变量Path下添加后，均可在win+r中输入程序名，打开程序 如果新添加环境变量（非Path），则需要输入%变量名%才能打开程序 参考： https://zhuanlan.zhihu.com/p/67726501 鼠标接收器出现问题？这是我目前用的鼠标罗技M590，昨天晚上还能用，今天打开笔记本电脑发现鼠标不能用了，于是把USB接收器拔下来重新插入后，发现出现下面的提示 尝试的方法有： 1.重启电脑 2. 3.更新驱动 都失败了，然后我觉得应该是接收器出了问题，于是我找了一个也用罗技鼠标的朋友，用了他的接收器发现顺利连接上了，然后从网上单独购买了一个优联接收器。 Adobe Acrobat DC打开Adobe Acrobat提示：未找到IMSLib。Acrobat服务将无法正常工作 在网上找到IMSLib.dll文件下载复制文件到路径：C:\Program Files (x86)\Common Files\Adobe\OOBE\PDApp\P7如果没有相关文件夹，可以手动创建。 https://pan.baidu.com/s/1otyL7Co7O1SfKLyXU7Xctg 提取码：isht photoshop 下载PSCS6绿化.exe 绿化即可解决 https://pan.baidu.com/s/1SdUjeuPetjtnaPJARmYwVg 提取码：x8i3 现在对于Adobe系列产品，下面网站提供了详细的安装方式和安装包 https://www.isharepc.com/ IPIP地址分为公网IP和私网IP 我们用笔记本电脑在网上查询的IP地址都是公网IP地址，然后用ipconfig查询的地址发现IPV4地址与网上查询的地址不同，说明我们用的都是公网IP分配的私网IP。 举例说明： 1.家里使用的路由器 我们家里连接同一个路由器（局域网）的不同设备，都被分配了一个私网IP地址，各不相同，但是在外网看来我们都是同一个IP地址（公网IP，运营商每次分配给我们的公网IP是不一样的，都是从IP池里随机取的。可以重启路由器观察一下，每当你重启一次路由器之后，公网IP就会切换。这里说明：有线网都是采用公网IP），默认私网IP地址是动态的，但是可以自己设置成静态。 下面两小节部分是引用 http://yukai.space/2017/06/05/%E5%A6%82%E4%BD%95%E4%BB%8E%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE%E5%AE%B6%E9%87%8C%E7%9A%84%E7%94%B5%E8%84%91/ 动态域名解析这就需要动态域名解析来解决。简单来说就是将这些公网IP映射到一个域名上，无论IP怎么切换，我们只要通过这个域名就能得到IP，并进行访问，至于域名和动态IP怎么映射，我们不必关心，只要记住这个域名就好了。 TP-LINK本身有自己动态域名解析服务，还支持花生壳的动态域名解析服务。在路由器应用管理-&gt;DDNS 界面可以选择动态域名解析服务提供方，以及免费域名。我这里就选择了TP-LINK的域名解析服务，简单快捷。 填写好域名信息并保存之后，打开控制台，ping一下这个域名。如果ping返回的响应结果ip地址就是我们的公网IP，那么动态域名配置成功。 这时可以在家里搭建一套服务器，若服务器是用WiFi上网，在同一个局域网（公网）中，可以连接服务器的私网IP（设置成静态）可以进入服务器。若服务器是插网线的（公网IP，和运营商联系设置成静态），那就连接服务器的公网IP，这时就可以不在同一个局域网了。 端口映射试想一下，连接到路由器上的设备往往不止一个，有电脑，平板，手机…路由器会为每个设备分配一个私有地址，而这些设备共享一个公网IP，大家轮换使用(NAT映射)。那么，我们要从外网访问家里的主机时，只有公网IP，如何在这众多的设备中选择出我们的主机呢？ 如果路由器采用DHCP的方式为局域网内的设备分配私有IP，那么这个IP往往是有时效性的，这一次你的主机是192.168.1.105，说不定过一会就自动切换到其他IP了。这样的话对我们的端口映射会有影响。可以修改路由器设置，为局域网主机分配固定的私有IP地址。 端口映射解决了这个问题。先看看怎么配置端口映射。在应用管理-&gt;虚拟服务器 中添加一行映射。外部端口（真实端口映射）是在外网访问我们局域网主机提供的服务时指定的端口，内部端口是局域网主机提供服务的真实端口。 通过域名+端口（外部端口）可以访问到自己主机提供的这个服务。 2.手机使用的移动网络 我们在网上查询IP地址是运营商提供的公网IP，但是手机被分配的是私网IP。 3.在学校使用局域网 我们在学校连接的校园网WiFi，在网上查询IP地址是教育商提供的公网IP，电脑ipconfig查询显示被分配的私网IP，但是办公室里插网线的电脑都是公网IP，ipconfig和网上查的ip地址一致，但是如果想做静态须向学校申请。 可以在办公室把公网IP设置成静态，把电脑做成服务器，然后在校外连接自己电脑（中转服务器），再访问学校的某个地址（私网IP），下载文献，访问信息门户。本质与VPN原理相同。 4.Google插件VPN翻墙 境内访问境外的中转服务器，然后服务器（公网IP）再访问其中的某个地址（私网IP）分配给你。 服务器和普通电脑这里不谈论性能，只介绍IP区别 服务器的IP是固定不变的 普通的PC是变化的 同一个局域网下电脑之间相互访问以windows为例，只需目标电脑打开远程桌面连接，关闭防火墙即可。载体电脑Win+R输入mstsc，计算机：局域网IP，计算机用户名（一般默认为Adminstrator），或者打开cmd输入net user查看 路由器、猫、网络带宽、NAS家用网络带宽一般是100Mbps，换算为12.5MB/s. 猫家里想要上网，可以没有路由器，但是一定不能没有Modem modem光调制解调器 光猫属于绑定设备，不能随意更换，如果光猫设备坏掉，自己买的光猫是不能直接使用的，需要到电信或者移动营业厅将原来的光猫解绑，绑定新买的光猫，才能使用 光纤-ADSL猫（实现光通信）Lan端口接到路由器wan端口，再由路由器的Lan端口接到其他终端，比如NAS，台式机等等。Lan端口接到的其他设备都是分配的私网IP。 光猫有两种模式： 路由模式：电脑接上光猫的Lan口就可以上网了，光猫已经配置了PPPOE拨号，也开启了DHCP服务，自动获取了一个内网IP直接通过光猫NAT转换上网 桥接模式：电脑接上光猫的Lan口不能上网，需要电脑进行拨号连接才可以上网 路由器路由器属于非绑定设备，可以拿到任意地方更改设置 千兆路由器模糊概念： 1.wan端口是1Gbps 2.lan端口是1Gbps 3.支持802.11ac的1000Mbps无线 市面上现在都是双频路由器，就是有2.4G和5G两个频段WiFi信号路由器，2.4G频段单根天线带宽是150Mbps，5G频段单根天线带宽433Mbps，如果是2根2.4G天线和2根5G（穿墙效果差）天线，WiFi传输带宽就可以达到1166Mbps。但是如果不使用局域网操作，直接在网上下载的速率肯定达不到125Mb/s，因为家用带宽100Mbps~12.5MB/s，好处是 1.可以适当减小信号的衰减。 2.搭建NAS，在局域网中设备之间用WiFi传输文件，速率可以达到125Mb/s。 一般路由器端口wan端口是100Mbps，因为家用带宽就是100Mbps，上网下载速度最大只能12.5MB/s。但是Lan端口就不同，如果是1Gbps，使用NAS（私有云），通过Lan端口连接NAS和台式机，两个设备在局域网下，设备之间传输文件的速率可以达到125MB/s，和你办的带宽没有关系。如果路由器没有千兆Lan端口的话，可以考虑加一个交换机，光纤-猫-交换机（千兆端口）-路由器/NAS（群晖设备有两个Lan端口）或者就是上面说的换一个千兆WiFi路由器解决。 两个路由器的连接方式参考：https://xw.qq.com/cmsid/20190607A0DZ2G00 路由模式：主路由器的Wan口连接光猫，副路由器的Wan口连接路由器的Wan口 交换模式：主路由器的Wan口连接光猫，副路由器的Lan口连接主路由器的Lan口 传输协议和接口USB协议和雷电协议 USB2.0 60MB/s USB3.1 Gen1 俗称的USB3.0 640MB/s 供电不足100W USB3.1 Gen2 1280MB/s 供电可达100W USB3.2 2560MB/s 雷电3协议支持USB所有协议 5G/s TypeA接口支持USB3.1 Gen1和USB2.0协议 TypeC接口支持USB2.0，USB3.1 Gen1和USB3.1 Gen2协议。如果有闪电标志即支持雷电3协议。 举例： 两个接口的传输速率都是640MB/s，应该都是支持USB3.1 Gen1协议，小米充电器一般都是45W/65W，未达到100W。 第二个TypeC接口无法连接电源，不支持转接 DP, HDMI,VGA 等等接口输出视频，也就是说并不能用来连接外接显示器。但是TypeA接口的USB3.0协议可以转接视频输出。说明小米笔记本pro的第二个TypeC接口是阉割版的。 目前手机上的TypeC接口支持的是USB2.0协议。 Windows 使用ssh secure file transfer上传文件到linux服务器填写Host Name（你的服务器地址或域名），User Name（你的服务器用户名，注意你SSH使用root用户是否有权限登陆，或使用其他用户登陆），Port（你SSH登陆的端口，默认为22）。 配置一台主机（有想法）不同价位详细配置参考： https://zhuanlan.zhihu.com/p/100313816 CPU:逻辑运算生产CPU的两大厂商：Intel和AMD AMD锐龙处理器值得关注 希望在自己工位配上7000元的主机 主板：华硕、技嘉和微星(MSI)显卡：全球能设计显卡芯片的只有Intel、AMD、Nvidia三家公司，Intel主要设计CPU的核心显卡，Nvidia和AMD设计独立显卡，AMD和Nvidia只负责造显卡芯片，显卡由签约制造商生产，比如华硕、技嘉，微星（MSI）硬盘电源机箱散热器装机顺序参考https://www.youtube.com/watch?v=in7gZyxAUPU 1.安装CPU到主板上 2.给CPU安装散热风扇（涂硅脂），连接CPU风扇电源线，接口（CPU FAN） 3.插内存条 4.装机箱 安装主板 安装电源 安装硬盘（机械+固态）：把硬盘数据线接到主板 安装显卡（插在主板的PCI EXPRESS X16） 5.接电源和电源线 最宽的线是给主板供电 8Pin（可以拆开成4pin）口给CPU供电 6pin口给GPU供电 非常扁的接口给硬盘供电 VPN&amp;VPS翻墙原理GFW Dns劫持：站在用户和dns服务器之间，破坏它们的正常通讯，并向用户回传一个假ip。用户拿不到真正的ip，自然也就访问不到本想访问的网站了。 Ip封锁：直接锁住了访问目标网站的去路，用户发往被封锁ip的任何数据都会被墙截断。 系统安装window7安装windows原生系统镜像，用软碟通制作启动盘后，安装完成后，会缺少很多驱动，下载驱动精灵一顿操作后，总感觉系统要卡很多（个人感觉，可能自己不会优化配置，再或者缺一些东西） 于是直接使用Ghost系统制作，和网上现有的软件制作启动盘（优启通）,先制作U盘，然后把系统镜像复制到U盘中，便可以制作了，效果还不错！]]></content>
+    <title>清华园讲座</title>
+    <url>/2019/12/20/speech/</url>
+    <content><![CDATA[<p>讲座更新中</p>
+
+
+	<div class="row">
+    <embed src="./main.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <categories>
+        <category>speech</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Matlab</title>
+    <url>/2019/11/25/matlab/</url>
+    <content><![CDATA[<h1 id="1-输入输出参量可变的函数"><a href="#1-输入输出参量可变的函数" class="headerlink" title="1.输入输出参量可变的函数"></a>1.输入输出参量可变的函数</h1><h2 id="实现方法1："><a href="#实现方法1：" class="headerlink" title="实现方法1："></a>实现方法1：</h2><p>说明：nargin,nargout函数，建议里面用为else if省去许多end</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc;clear;close;</span><br><span class="line">a=<span class="number">9</span>;b=<span class="number">200</span>;c=<span class="number">30</span>;</span><br><span class="line">[<span class="built_in">max</span>,num]=maxium(a,b,c)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[first,second]</span>=<span class="title">maxium</span><span class="params">(a,b,c)</span></span></span><br><span class="line"><span class="keyword">switch</span> nargin</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>      <span class="comment">%相当于一个输入变量为3的函数</span></span><br><span class="line">        <span class="keyword">if</span> a&gt;b</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"b"</span>;num=b;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">if</span> num&lt;c</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"c"</span>;num=c;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>      <span class="comment">%相当于一个输入变量为2的函数</span></span><br><span class="line">        <span class="keyword">if</span> a&gt;b</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"b"</span>,num=b;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">switch</span> nargout</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span></span><br><span class="line">        first=<span class="built_in">max</span>;      <span class="comment">%相当于一个输出变量为2的函数</span></span><br><span class="line">        second=num;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span></span><br><span class="line">        first=num;      <span class="comment">%相当于一个输出变量为1的函数</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[first,second]</span>=<span class="title">maxium</span><span class="params">(a,b,c)</span></span></span><br><span class="line"><span class="keyword">if</span> nargin==<span class="number">3</span>        <span class="comment">%相当于一个输入变量为3的函数</span></span><br><span class="line">        <span class="keyword">if</span> a&gt;b</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"b"</span>;num=b;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">if</span> num&lt;c</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"c"</span>;num=c;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">if</span> nargin==<span class="number">2</span>        <span class="comment">%相当于一个输入变量为2的函数</span></span><br><span class="line">        <span class="keyword">if</span> a&gt;b</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"b"</span>,num=b;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">if</span> nargout==<span class="number">2</span>       <span class="comment">%相当于一个输出变量为2的函数</span></span><br><span class="line">        first=<span class="built_in">max</span>;      </span><br><span class="line">        second=num;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">if</span> nargout==<span class="number">1</span>       <span class="comment">%相当于一个输出变量为1的函数</span></span><br><span class="line">        first=num;      </span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="实现方法2："><a href="#实现方法2：" class="headerlink" title="实现方法2："></a>实现方法2：</h2><p>说明：使用varargin,varargout函数</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc;clear;close;</span><br><span class="line">a=<span class="number">9</span>;b=<span class="number">200</span>;c=<span class="number">30</span>;</span><br><span class="line">[<span class="built_in">max</span>,num]=maxium_1(a,b,c)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">varargout</span> = <span class="title">maxium_1</span><span class="params">(varargin)</span></span></span><br><span class="line"><span class="comment">% varargin=[a,b,c];</span></span><br><span class="line"><span class="comment">% varargout=[max,num];</span></span><br><span class="line">a=varargin&#123;<span class="number">1</span>&#125;;b=varargin&#123;<span class="number">2</span>&#125;;c=varargin&#123;<span class="number">3</span>&#125;;</span><br><span class="line"><span class="comment">%输入变量</span></span><br><span class="line"><span class="keyword">if</span> nargin==<span class="number">3</span>        <span class="comment">%相当于一个输入变量为3的函数</span></span><br><span class="line">    <span class="keyword">if</span> a&gt;b</span><br><span class="line">        <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">    <span class="keyword">elseif</span> a&lt;b</span><br><span class="line">        <span class="built_in">max</span>=<span class="string">"b"</span>;num=b;</span><br><span class="line">    <span class="keyword">elseif</span> num&lt;c</span><br><span class="line">        <span class="built_in">max</span>=<span class="string">"c"</span>;num=c;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">if</span> nargin==<span class="number">2</span>        <span class="comment">%相当于一个输入变量为2的函数</span></span><br><span class="line">    <span class="keyword">if</span> a&gt;b</span><br><span class="line">        <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">    <span class="keyword">elseif</span> a&lt;b</span><br><span class="line">        <span class="built_in">max</span>=<span class="string">"b"</span>,num=b;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">%输出变量</span></span><br><span class="line"><span class="keyword">if</span> nargout==<span class="number">2</span></span><br><span class="line">    varargout&#123;<span class="number">1</span>&#125;=<span class="built_in">max</span>;</span><br><span class="line">    varargout&#123;<span class="number">2</span>&#125;=num;</span><br><span class="line"><span class="keyword">elseif</span> nargout==<span class="number">1</span></span><br><span class="line">    varargout&#123;<span class="number">1</span>&#125;=num;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="2-元胞数组的应用"><a href="#2-元胞数组的应用" class="headerlink" title="2.元胞数组的应用"></a>2.元胞数组的应用</h1><h2 id="和（）的区别"><a href="#和（）的区别" class="headerlink" title="{}   和（）的区别"></a>{}   和（）的区别</h2><p>说明：这里可以解释上面，因为varargin本身是个元胞数组，varargin用{}直接引用a,b,c里面的值（数据类型是数值型）</p>
+<p>举例：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc;clear;close;</span><br><span class="line">data1_1=&#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>;<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>&#125;;</span><br><span class="line">data2_1=&#123;<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>&#125;;</span><br><span class="line">data1 = &#123;data1_1,<span class="string">"hello"</span>;data2_1,<span class="number">3</span>&#125;;</span><br><span class="line">data1(<span class="number">2</span>);</span><br><span class="line">[A,B,C]=data1&#123;<span class="number">2</span>&#125;&#123;<span class="number">1</span>,:&#125;;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Matlab</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>计算机常见问题</title>
+    <url>/2019/11/23/windows-question/</url>
+    <content><![CDATA[<h1 id="什么是环境变量？"><a href="#什么是环境变量？" class="headerlink" title="什么是环境变量？"></a>什么是环境变量？</h1><h2 id="用户变量"><a href="#用户变量" class="headerlink" title="用户变量"></a>用户变量</h2><p>当前用户可以对其进行添加、修改或删除</p>
+<h2 id="系统变量"><a href="#系统变量" class="headerlink" title="系统变量"></a>系统变量</h2><p>只有管理员才能添加、修改或删除，由windows定义并应用到所有系统用户</p>
+<h4 id="重要系统变量介绍"><a href="#重要系统变量介绍" class="headerlink" title="重要系统变量介绍"></a>重要系统变量介绍</h4><ul>
+<li>NUMBER_OF_PROCESSORS变量：代表用户电脑中逻辑处理器的数量</li>
+<li>OS变量：表面用户的操作系统</li>
+<li>Path变量：规定操作系统在指定的文件路径中查看可执行文件</li>
+</ul>
+<h3 id="环境变量的应用实例"><a href="#环境变量的应用实例" class="headerlink" title="环境变量的应用实例"></a>环境变量的应用实例</h3><h4 id="索引文件夹"><a href="#索引文件夹" class="headerlink" title="索引文件夹"></a>索引文件夹</h4><p>在用户环境变量中，随意设置一个变量名，然后把路径指定到你的文件夹中或者某个文件（exe)中，接着在运行中（win+r)中输入%变量名%,便可以直接进入文件夹中或者运行该程序</p>
+<h4 id="打开应用"><a href="#打开应用" class="headerlink" title="打开应用"></a>打开应用</h4><p>在用户环境变量Path中添加应用的目录即可</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>在用户环境变量Path下添加后，均可在win+r中输入程序名，打开程序</li>
+<li>如果新添加环境变量（非Path），则需要输入%变量名%才能打开程序</li>
+</ul>
+<p>参考： <a href="https://zhuanlan.zhihu.com/p/67726501" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/67726501</a> </p>
+<h1 id="鼠标接收器出现问题？"><a href="#鼠标接收器出现问题？" class="headerlink" title="鼠标接收器出现问题？"></a>鼠标接收器出现问题？</h1><p>这是我目前用的鼠标罗技M590，昨天晚上还能用，今天打开笔记本电脑发现鼠标不能用了，于是把USB接收器拔下来重新插入后，发现出现下面的提示</p>
+<p><img src="./2.JPG" alt></p>
+<p><img src="./1.JPG" alt></p>
+<p><img src="./3.JPG" alt></p>
+<p>尝试的方法有：</p>
+<p>1.重启电脑</p>
+<p>2.<img src="./5.png" alt></p>
+<p>3.更新驱动</p>
+<p><img src="./4.JPG" alt></p>
+<p>都失败了，然后我觉得应该是接收器出了问题，于是我找了一个也用罗技鼠标的朋友，用了他的接收器发现顺利连接上了，然后从网上单独购买了一个优联接收器。</p>
+<h1 id="Adobe-Acrobat-DC"><a href="#Adobe-Acrobat-DC" class="headerlink" title="Adobe Acrobat DC"></a>Adobe Acrobat DC</h1><p>打开Adobe Acrobat提示：未找到IMSLib。Acrobat服务将无法正常工作</p>
+<p>在网上找到IMSLib.dll文件下载<br>复制文件到路径：C:\Program Files (x86)\Common Files\Adobe\OOBE\PDApp\P7<br>如果没有相关文件夹，可以手动创建。</p>
+<p><a href="https://pan.baidu.com/s/1otyL7Co7O1SfKLyXU7Xctg" target="_blank" rel="noopener">https://pan.baidu.com/s/1otyL7Co7O1SfKLyXU7Xctg</a></p>
+<p>提取码：isht</p>
+<h1 id="photoshop"><a href="#photoshop" class="headerlink" title="photoshop"></a>photoshop</h1><p><img src="./5.jpg" alt></p>
+<p>下载PSCS6绿化.exe    绿化即可解决</p>
+<p><a href="https://pan.baidu.com/s/1SdUjeuPetjtnaPJARmYwVg" target="_blank" rel="noopener">https://pan.baidu.com/s/1SdUjeuPetjtnaPJARmYwVg</a></p>
+<p>提取码：x8i3</p>
+<p>现在对于Adobe系列产品，下面网站提供了详细的安装方式和安装包</p>
+<p><a href="https://www.isharepc.com/" target="_blank" rel="noopener">https://www.isharepc.com/</a></p>
+<h1 id="IP"><a href="#IP" class="headerlink" title="IP"></a>IP</h1><p>IP地址分为公网IP和私网IP</p>
+<p>我们用笔记本电脑在网上查询的IP地址都是公网IP地址，然后用ipconfig查询的地址发现IPV4地址与网上查询的地址不同，说明我们用的都是公网IP分配的私网IP。</p>
+<p>举例说明：</p>
+<p>1.家里使用的路由器</p>
+<p>我们家里连接同一个路由器（局域网）的不同设备，都被分配了一个私网IP地址，各不相同，但是在外网看来我们都是同一个IP地址（公网IP，运营商每次分配给我们的公网IP是不一样的，都是从IP池里随机取的。可以重启路由器观察一下，每当你重启一次路由器之后，公网IP就会切换。这里说明：有线网都是采用公网IP），默认私网IP地址是动态的，但是可以自己设置成静态。</p>
+<p>下面两小节部分是引用</p>
+<p><a href="http://yukai.space/2017/06/05/如何从外网访问家里的电脑/" target="_blank" rel="noopener">http://yukai.space/2017/06/05/%E5%A6%82%E4%BD%95%E4%BB%8E%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE%E5%AE%B6%E9%87%8C%E7%9A%84%E7%94%B5%E8%84%91/</a></p>
+<h5 id="动态域名解析"><a href="#动态域名解析" class="headerlink" title="动态域名解析"></a>动态域名解析</h5><p>这就需要动态域名解析来解决。简单来说就是将这些公网IP映射到一个域名上，无论IP怎么切换，我们只要通过这个域名就能得到IP，并进行访问，至于域名和动态IP怎么映射，我们不必关心，只要记住这个域名就好了。</p>
+<p>TP-LINK本身有自己动态域名解析服务，还支持花生壳的动态域名解析服务。在路由器应用管理-&gt;DDNS 界面可以选择动态域名解析服务提供方，以及免费域名。我这里就选择了TP-LINK的域名解析服务，简单快捷。</p>
+<p>填写好域名信息并保存之后，打开控制台，ping一下这个域名。如果ping返回的响应结果ip地址就是我们的公网IP，那么动态域名配置成功。</p>
+<p>这时可以在家里搭建一套服务器，若服务器是用WiFi上网，在同一个局域网（公网）中，可以连接服务器的私网IP（设置成静态）可以进入服务器。若服务器是插网线的（公网IP，和运营商联系设置成静态），那就连接服务器的公网IP，这时就可以不在同一个局域网了。</p>
+<h5 id="端口映射"><a href="#端口映射" class="headerlink" title="端口映射"></a>端口映射</h5><p>试想一下，连接到路由器上的设备往往不止一个，有电脑，平板，手机…路由器会为每个设备分配一个私有地址，而这些设备共享一个公网IP，大家轮换使用(NAT映射)。那么，我们要从外网访问家里的主机时，只有公网IP，如何在这众多的设备中选择出我们的主机呢？</p>
+<p>如果路由器采用DHCP的方式为局域网内的设备分配私有IP，那么这个IP往往是有时效性的，这一次你的主机是192.168.1.105，说不定过一会就自动切换到其他IP了。这样的话对我们的端口映射会有影响。可以修改路由器设置，为局域网主机分配固定的私有IP地址。</p>
+<p>端口映射解决了这个问题。先看看怎么配置端口映射。在应用管理-&gt;虚拟服务器 中添加一行映射。外部端口（真实端口映射）是在外网访问我们局域网主机提供的服务时指定的端口，内部端口是局域网主机提供服务的真实端口。</p>
+<p>通过域名+端口（外部端口）可以访问到自己主机提供的这个服务。</p>
+<p>2.手机使用的移动网络</p>
+<p>我们在网上查询IP地址是运营商提供的公网IP，但是手机被分配的是私网IP。</p>
+<p>3.在学校使用局域网</p>
+<p>我们在学校连接的校园网WiFi，在网上查询IP地址是教育商提供的公网IP，电脑ipconfig查询显示被分配的私网IP，但是办公室里插网线的电脑都是公网IP，ipconfig和网上查的ip地址一致，但是如果想做静态须向学校申请。</p>
+<p>可以在办公室把公网IP设置成静态，把电脑做成服务器，然后在校外连接自己电脑（中转服务器），再访问学校的某个地址（私网IP），下载文献，访问信息门户。本质与VPN原理相同。</p>
+<p>4.Google插件VPN翻墙</p>
+<p>境内访问境外的中转服务器，然后服务器（公网IP）再访问其中的某个地址（私网IP）分配给你。</p>
+<h1 id="服务器和普通电脑"><a href="#服务器和普通电脑" class="headerlink" title="服务器和普通电脑"></a>服务器和普通电脑</h1><p>这里不谈论性能，只介绍IP区别</p>
+<p>服务器的IP是固定不变的</p>
+<p>普通的PC是变化的</p>
+<h2 id="同一个局域网下电脑之间相互访问"><a href="#同一个局域网下电脑之间相互访问" class="headerlink" title="同一个局域网下电脑之间相互访问"></a>同一个局域网下电脑之间相互访问</h2><p>以windows为例，只需目标电脑打开远程桌面连接，关闭防火墙即可。载体电脑Win+R输入mstsc，计算机：局域网IP，计算机用户名（一般默认为Adminstrator），或者打开cmd输入net user查看</p>
+<h1 id="路由器、猫、网络带宽、NAS"><a href="#路由器、猫、网络带宽、NAS" class="headerlink" title="路由器、猫、网络带宽、NAS"></a>路由器、猫、网络带宽、NAS</h1><h4 id="家用网络带宽"><a href="#家用网络带宽" class="headerlink" title="家用网络带宽"></a>家用网络带宽</h4><p>一般是100Mbps，换算为12.5MB/s.</p>
+<h3 id="猫"><a href="#猫" class="headerlink" title="猫"></a>猫</h3><p>家里想要上网，可以没有路由器，但是一定不能没有Modem</p>
+<p>modem光调制解调器 </p>
+<p>光猫属于绑定设备，不能随意更换，如果光猫设备坏掉，自己买的光猫是不能直接使用的，需要到电信或者移动营业厅将原来的光猫解绑，绑定新买的光猫，才能使用</p>
+<p>光纤-ADSL猫（实现光通信）Lan端口接到路由器wan端口，再由路由器的Lan端口接到其他终端，比如NAS，台式机等等。Lan端口接到的其他设备都是分配的私网IP。</p>
+<p>光猫有两种模式：</p>
+<ul>
+<li><p>路由模式：电脑接上光猫的Lan口就可以上网了，光猫已经配置了PPPOE拨号，也开启了DHCP服务，自动获取了一个内网IP直接通过光猫NAT转换上网</p>
+</li>
+<li><p>桥接模式：电脑接上光猫的Lan口不能上网，需要电脑进行拨号连接才可以上网</p>
+</li>
+</ul>
+<h3 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h3><p>路由器属于非绑定设备，可以拿到任意地方更改设置</p>
+<p>千兆路由器模糊概念：</p>
+<p>1.wan端口是1Gbps</p>
+<p>2.lan端口是1Gbps</p>
+<p>3.支持802.11ac的1000Mbps无线</p>
+<p>市面上现在都是双频路由器，就是有2.4G和5G两个频段WiFi信号路由器，2.4G频段单根天线带宽是150Mbps，5G频段单根天线带宽433Mbps，如果是2根2.4G天线和2根5G（穿墙效果差）天线，WiFi传输带宽就可以达到1166Mbps。但是如果不使用局域网操作，直接在网上下载的速率肯定达不到125Mb/s，因为家用带宽100Mbps~12.5MB/s，好处是</p>
+<p>1.可以适当减小信号的衰减。</p>
+<p>2.搭建NAS，在局域网中设备之间用WiFi传输文件，速率可以达到125Mb/s。</p>
+<p>一般路由器端口wan端口是100Mbps，因为家用带宽就是100Mbps，上网下载速度最大只能12.5MB/s。但是Lan端口就不同，如果是1Gbps，使用NAS（私有云），通过Lan端口连接NAS和台式机，两个设备在局域网下，设备之间传输文件的速率可以达到125MB/s，和你办的带宽没有关系。如果路由器没有千兆Lan端口的话，可以考虑加一个交换机，光纤-猫-交换机（千兆端口）-路由器/NAS（群晖设备有两个Lan端口）或者就是上面说的换一个千兆WiFi路由器解决。</p>
+<h3 id="两个路由器的连接方式"><a href="#两个路由器的连接方式" class="headerlink" title="两个路由器的连接方式"></a>两个路由器的连接方式</h3><p>参考：<a href="https://xw.qq.com/cmsid/20190607A0DZ2G00" target="_blank" rel="noopener">https://xw.qq.com/cmsid/20190607A0DZ2G00</a></p>
+<ul>
+<li>路由模式：主路由器的Wan口连接光猫，副路由器的Wan口连接路由器的Wan口</li>
+<li>交换模式：主路由器的Wan口连接光猫，副路由器的Lan口连接主路由器的Lan口</li>
+</ul>
+<h1 id="传输协议和接口"><a href="#传输协议和接口" class="headerlink" title="传输协议和接口"></a>传输协议和接口</h1><p>USB协议和雷电协议</p>
+<p>USB2.0    60MB/s</p>
+<p>USB3.1 Gen1 俗称的USB3.0     640MB/s     供电不足100W</p>
+<p>USB3.1 Gen2    1280MB/s    供电可达100W</p>
+<p>USB3.2    2560MB/s</p>
+<p>雷电3协议支持USB所有协议    5G/s</p>
+<p>TypeA接口支持USB3.1 Gen1和USB2.0协议</p>
+<p>TypeC接口支持USB2.0，USB3.1 Gen1和USB3.1 Gen2协议。如果有闪电标志即支持雷电3协议。</p>
+<p>举例：</p>
+<p><img src="./6.jpg" alt></p>
+<p>两个接口的传输速率都是640MB/s，应该都是支持USB3.1 Gen1协议，小米充电器一般都是45W/65W，未达到100W。</p>
+<p>第二个TypeC接口无法连接电源，不支持转接 DP, HDMI,VGA 等等接口输出视频，也就是说并不能用来连接外接显示器。但是TypeA接口的USB3.0协议可以转接视频输出。说明小米笔记本pro的第二个TypeC接口是阉割版的。</p>
+<p>目前手机上的TypeC接口支持的是USB2.0协议。</p>
+<h1 id="Windows-使用ssh-secure-file-transfer上传文件到linux服务器"><a href="#Windows-使用ssh-secure-file-transfer上传文件到linux服务器" class="headerlink" title="Windows 使用ssh secure file transfer上传文件到linux服务器"></a>Windows 使用ssh secure file transfer上传文件到linux服务器</h1><p>填写Host Name（你的服务器地址或域名），User Name（你的服务器用户名，注意你SSH使用root用户是否有权限登陆，或使用其他用户登陆），Port（你SSH登陆的端口，默认为22）。</p>
+<h1 id="配置一台主机（有想法）"><a href="#配置一台主机（有想法）" class="headerlink" title="配置一台主机（有想法）"></a>配置一台主机（有想法）</h1><p>不同价位详细配置参考：</p>
+<p><a href="https://zhuanlan.zhihu.com/p/100313816" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/100313816</a></p>
+<h5 id="CPU-逻辑运算"><a href="#CPU-逻辑运算" class="headerlink" title="CPU:逻辑运算"></a>CPU:逻辑运算</h5><p>生产CPU的两大厂商：Intel和AMD</p>
+<p>AMD锐龙处理器值得关注</p>
+<p>希望在自己工位配上7000元的主机</p>
+<h5 id="主板：华硕、技嘉和微星-MSI"><a href="#主板：华硕、技嘉和微星-MSI" class="headerlink" title="主板：华硕、技嘉和微星(MSI)"></a>主板：华硕、技嘉和微星(MSI)</h5><h5 id="显卡：全球能设计显卡芯片的只有Intel、AMD、Nvidia三家公司，Intel主要设计CPU的核心显卡，Nvidia和AMD设计独立显卡，AMD和Nvidia只负责造显卡芯片，显卡由签约制造商生产，比如华硕、技嘉，微星（MSI）"><a href="#显卡：全球能设计显卡芯片的只有Intel、AMD、Nvidia三家公司，Intel主要设计CPU的核心显卡，Nvidia和AMD设计独立显卡，AMD和Nvidia只负责造显卡芯片，显卡由签约制造商生产，比如华硕、技嘉，微星（MSI）" class="headerlink" title="显卡：全球能设计显卡芯片的只有Intel、AMD、Nvidia三家公司，Intel主要设计CPU的核心显卡，Nvidia和AMD设计独立显卡，AMD和Nvidia只负责造显卡芯片，显卡由签约制造商生产，比如华硕、技嘉，微星（MSI）"></a>显卡：全球能设计显卡芯片的只有Intel、AMD、Nvidia三家公司，Intel主要设计CPU的核心显卡，Nvidia和AMD设计独立显卡，AMD和Nvidia只负责造显卡芯片，显卡由签约制造商生产，比如华硕、技嘉，微星（MSI）</h5><h5 id="硬盘"><a href="#硬盘" class="headerlink" title="硬盘"></a>硬盘</h5><h5 id="电源"><a href="#电源" class="headerlink" title="电源"></a>电源</h5><h5 id="机箱"><a href="#机箱" class="headerlink" title="机箱"></a>机箱</h5><h5 id="散热器"><a href="#散热器" class="headerlink" title="散热器"></a>散热器</h5><h5 id="装机顺序"><a href="#装机顺序" class="headerlink" title="装机顺序"></a>装机顺序</h5><p>参考<a href="https://www.youtube.com/watch?v=in7gZyxAUPU" target="_blank" rel="noopener">https://www.youtube.com/watch?v=in7gZyxAUPU</a></p>
+<p>1.安装CPU到主板上</p>
+<p>2.给CPU安装散热风扇（涂硅脂），连接CPU风扇电源线，接口（CPU FAN）</p>
+<p>3.插内存条</p>
+<p>4.装机箱</p>
+<ul>
+<li>安装主板</li>
+<li>安装电源</li>
+<li>安装硬盘（机械+固态）：把硬盘数据线接到主板</li>
+<li>安装显卡（插在主板的PCI EXPRESS X16）</li>
+</ul>
+<p>5.接电源和电源线</p>
+<ul>
+<li>最宽的线是给主板供电</li>
+<li>8Pin（可以拆开成4pin）口给CPU供电</li>
+<li>6pin口给GPU供电</li>
+<li>非常扁的接口给硬盘供电</li>
+</ul>
+<h1 id="VPN-amp-VPS"><a href="#VPN-amp-VPS" class="headerlink" title="VPN&amp;VPS"></a>VPN&amp;VPS</h1><h3 id="翻墙原理GFW"><a href="#翻墙原理GFW" class="headerlink" title="翻墙原理GFW"></a>翻墙原理GFW</h3><ul>
+<li>Dns劫持：站在用户和dns服务器之间，破坏它们的正常通讯，并向用户回传一个假ip。用户拿不到真正的ip，自然也就访问不到本想访问的网站了。</li>
+<li>Ip封锁：直接锁住了访问目标网站的去路，用户发往被封锁ip的任何数据都会被墙截断。</li>
+</ul>
+<h1 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h1><h3 id="window7安装"><a href="#window7安装" class="headerlink" title="window7安装"></a>window7安装</h3><p><a href="http://msdn.itellyou.cn/" target="_blank" rel="noopener">windows原生系统镜像</a>，用软碟通制作启动盘后，安装完成后，会缺少很多驱动，下载驱动精灵一顿操作后，总感觉系统要卡很多（个人感觉，可能自己不会优化配置，再或者缺一些东西）</p>
+<p>于是直接使用<a href="https://www.newxitong.com/" target="_blank" rel="noopener">Ghost系统</a>制作，和网上现有的软件制作启动盘（<a href="https://www.itsk.com/forum.php?mod=viewthread&tid=404842" target="_blank" rel="noopener">优启通</a>）,先制作U盘，然后把系统镜像复制到U盘中，便可以制作了，效果还不错！</p>
+]]></content>
       <categories>
         <category>computer</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[学习资源分享]]></title>
-    <url>%2F2019%2F09%2F01%2FSource%2F</url>
-    <content type="text"><![CDATA[清华大学实验安全教育考试题库链接：https://pan.baidu.com/s/1tYtOwMwS3_OCNdlHnomFMA提取码：dale 电子枪与离子束技术张以忱编著 出版社：冶金工业出版社 链接：https://pan.baidu.com/s/1w1eSFhPQmgxBg4zw_5-gJA提取码：97qj UltraEdit简介： UltraEdit（原名UltraEdit-32）是跨平台的一套商业性文本编辑器，由IDM Computer Solutions在1994年创造。UltraEdit有很强大的编程功能，支持宏、语法高亮度显示和正则表达式等功能。文件在标签中可以被浏览和编辑。安装需要约30 MB的磁盘空间。UltraEdit也支持以Unicode和hex编辑的模式 。 链接：https://pan.baidu.com/s/11NF30WgbwwGgfL8vf6hDcQ提取码：hqy6]]></content>
-      <categories>
-        <category>source</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[GitHub+Hexo 搭建个人主页]]></title>
-    <url>%2F2019%2F08%2F29%2FHexo%2BGithub%2F</url>
-    <content type="text"><![CDATA[搭建过程中遇到的问题和解决方案（基于win10）说明：整套搭建是参考吴润·RunDouble 1. Sublime Text或者UltraEdit下载安装 一款用于代码、标记和散文的精致文本编辑器，后续的文件编辑用该软件很方便，推荐下载 Download - Sublime Text Download-UltraEdit提取码：hqy6 2. 注册一个GitHub账户 新建一个仓库（repository)：仓库名设置为 用户名.github.io 3. 安装Git3.1 下载安装Git，测试git是否安装成功Git官网 3.2 Git与GitHub账号绑定（实现远程仓库和本地仓库的连接） 配置用户信息: （1）git config –global user.name “GitHub用户名” （2）git config –global user.email “GitHub注册邮箱” 生成ssh密钥文件（实现每次推送不用输密码,建立本地和远程的桥梁）： （1）ssh-keygen -t rsa -C “GitHub注册邮箱” 问题：C:\Users\Rescue\ .ssh文件夹如果只有两个文件，不包括known_hosts时，说明你直接回车，没有按照提示输入’yes’（因为这个我查了半天，我太愚蠢了😂） （2）打开GitHub_Setting_keys页面，新建new SSH Key，标题可以不填，内容是复制‘id_rsa_pub’文件内容 测试密钥设置成功 4. 安装Hexo4.1 准备工作（1）安装Node.js，配置Hexo的环境变量 （2）检测安装是否成功，成功时如下图： 4.2 开始安装（1）在电脑上创建一个文件夹（Hexo，Blog内容，Github远程仓库都存放在里面） （2）使用npm命令安装Hexo 在当前文件夹里面，输入npm install -g hexo-cli，如下图: （3）初始化博客 git bash下输入 hexo init blog，如下图 4.3 推送网站（1）站点配置文件 （2）保存站点配置文件 问题 解决 输入：npm install hexo-renderer-marked@2.0.0 （3）测试博客上线 hexo clean hexo g hexo d （4）打开网页输入 用户名.github.io 5. 主题设置5.1 Next主题下载https://www.jianshu.com/p/b20fc983005f 5.2 Next主题配置（1）about链接 需要在根目录下的source(_posts)文件中新建文件夹about,里面创建index.md文件 （2）头像上传 需要在根目录下的source(_posts)文件中新建文件夹”uploads”,里面放入照片 https://www.jianshu.com/p/3a05351a37dc （3）背景设置 https://blog.csdn.net/wang631106979/article/details/51375184 （4）开启搜索 https://yashuning.github.io/2018/06/29/hexo-Next-主题添加搜索功能 6. 域名更换(建议全部搭建完没问题更换)6.1 购买域名阿里云 6.2 域名解析Y大宽 7. 额外出现的问题7.1 Fatal: TaskCanceldException encountered上传远程仓库时突然需要输用户名和密码 根目录下config.yml文件中修改repo git@github.com:liweiwei12345/liweiwei12345.github.io.git https://blog.csdn.net/hhgggggg/article/details/77853665 7.2 ping github 请求超时（1）首先确定github是否ping的通，是否是端口的问题https://blog.csdn.net/u010377383/article/details/79365049 （2）如果是翻墙的原因https://blog.csdn.net/sdta25196/article/details/80203152 如果翻墙失败了，那就将当时翻墙的操作给删除就可以了 小建议：先用管理员权限打开记事本，然后将hosts文件里的内容复制进去，进行修改，最后替换它]]></content>
-      <categories>
-        <category>GitHub</category>
       </categories>
   </entry>
 </search>
