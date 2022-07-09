@@ -14,6 +14,54 @@
       </categories>
   </entry>
   <entry>
+    <title>高等数值分析</title>
+    <url>/2019/12/13/gaozhi/</url>
+    <content><![CDATA[<p>高等数值分析第一次实验（Word编写）</p>
+
+
+	<div class="row">
+    <embed src="./gaozhi1.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+<p>高等数值分析第二次实验（Latex编写）</p>
+
+
+	<div class="row">
+    <embed src="./gaozhi2.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+
+
+	<div class="row">
+    <embed src="http://7xov2f.com1.z0.glb.clouddn.com/bash_freshman.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+
+
+	<div class="row">
+    <embed src="http://7xov2f.com1.z0.glb.clouddn.com/bash_freshman.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>source</category>
+      </categories>
+  </entry>
+  <entry>
     <title>GitHub+Hexo 搭建个人主页</title>
     <url>/2019/08/29/Hexo+Github/</url>
     <content><![CDATA[<h1 id="搭建过程中遇到的问题和解决方案（基于win10）"><a href="#搭建过程中遇到的问题和解决方案（基于win10）" class="headerlink" title="搭建过程中遇到的问题和解决方案（基于win10）"></a>搭建过程中遇到的问题和解决方案（基于win10）</h1><p><strong>说明：整套搭建是参考<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">吴润·RunDouble</a></strong></p>
@@ -87,54 +135,6 @@
 ]]></content>
       <categories>
         <category>GitHub</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>高等数值分析</title>
-    <url>/2019/12/13/gaozhi/</url>
-    <content><![CDATA[<p>高等数值分析第一次实验（Word编写）</p>
-
-
-	<div class="row">
-    <embed src="./gaozhi1.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-
-<p>高等数值分析第二次实验（Latex编写）</p>
-
-
-	<div class="row">
-    <embed src="./gaozhi2.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-
-
-
-	<div class="row">
-    <embed src="http://7xov2f.com1.z0.glb.clouddn.com/bash_freshman.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-
-
-
-	<div class="row">
-    <embed src="http://7xov2f.com1.z0.glb.clouddn.com/bash_freshman.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>source</category>
       </categories>
   </entry>
   <entry>
