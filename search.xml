@@ -81,13 +81,24 @@
     <url>/2023/07/02/Individual%20resume/</url>
     <content><![CDATA[<h1 id="个人总结"><a href="#个人总结" class="headerlink" title="个人总结"></a>个人总结</h1><p>直博四年级在读，研究课题为金属陶瓷X射线管的设计研究</p>
 <p>目前已研制出160kV金属陶瓷X射线管样机，研究内容包含电子束聚焦结构设计、阳极靶结构设计、热阴极灯丝结构设计、器件热仿真和散热设计优化、电子束打靶模拟、超高真空封接工艺、灯丝寿命加速实验设计、射线管焦点尺寸测试方法等，具备定制化整管的能力，对整个X射线管行业的应用和发展具有比较全面的了解。</p>
-<h1 id="研究成果"><a href="#研究成果" class="headerlink" title="研究成果"></a>研究成果</h1><h2 id="一作"><a href="#一作" class="headerlink" title="一作"></a>一作</h2><p>圆柱法测量X射线管焦点尺寸的研究</p>
-<p>X射线管灯丝参数及温度分布计算的研究</p>
-<p>反射式X射线管阳极钨靶的模拟优化设计</p>
-<p>狭缝法测量X射线管焦点尺寸的研究</p>
-<p>X射线管聚焦结构的定点仿真设计研究</p>
-<h2 id="非一作"><a href="#非一作" class="headerlink" title="非一作"></a>非一作</h2><p>A physics-Driven X-Ray Image Data Augmentation Method for Automated Threat Detection in Nuclear Facility Entrancement</p>
-<p>新型碳纳米管冷阴极多焦点分布式X射线源的研制</p>
+<h1 id="研究成果"><a href="#研究成果" class="headerlink" title="研究成果"></a>研究成果</h1><h2 id="一作"><a href="#一作" class="headerlink" title="一作"></a>一作</h2><ul>
+<li><p>圆柱法测量X射线管焦点尺寸的研究</p>
+</li>
+<li><p>X射线管灯丝参数及温度分布计算的研究</p>
+</li>
+<li><p>反射式X射线管阳极钨靶的模拟优化设计</p>
+</li>
+<li><p>狭缝法测量X射线管焦点尺寸的研究</p>
+</li>
+<li><p>X射线管聚焦结构的定点仿真设计研究</p>
+</li>
+</ul>
+<h2 id="非一作"><a href="#非一作" class="headerlink" title="非一作"></a>非一作</h2><ul>
+<li><p>A physics-Driven X-Ray Image Data Augmentation Method for Automated Threat Detection in Nuclear Facility Entrancement</p>
+</li>
+<li><p>新型碳纳米管冷阴极多焦点分布式X射线源的研制</p>
+</li>
+</ul>
 ]]></content>
       <categories>
         <category>Source</category>
@@ -104,6 +115,30 @@
 ]]></content>
       <categories>
         <category>source</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Matlab</title>
+    <url>/2019/11/25/matlab/</url>
+    <content><![CDATA[<h1 id="1-输入输出参量可变的函数"><a href="#1-输入输出参量可变的函数" class="headerlink" title="1.输入输出参量可变的函数"></a>1.输入输出参量可变的函数</h1><h2 id="实现方法1："><a href="#实现方法1：" class="headerlink" title="实现方法1："></a>实现方法1：</h2><p>说明：nargin,nargout函数，建议里面用为else if省去许多end</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc;clear;close;</span><br><span class="line">a=<span class="number">9</span>;b=<span class="number">200</span>;c=<span class="number">30</span>;</span><br><span class="line">[<span class="built_in">max</span>,num]=maxium(a,b,c)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[first,second]</span>=<span class="title">maxium</span><span class="params">(a,b,c)</span></span></span><br><span class="line"><span class="keyword">switch</span> nargin</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>      <span class="comment">%相当于一个输入变量为3的函数</span></span><br><span class="line">        <span class="keyword">if</span> a&gt;b</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"b"</span>;num=b;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">if</span> num&lt;c</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"c"</span>;num=c;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>      <span class="comment">%相当于一个输入变量为2的函数</span></span><br><span class="line">        <span class="keyword">if</span> a&gt;b</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"b"</span>,num=b;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">switch</span> nargout</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span></span><br><span class="line">        first=<span class="built_in">max</span>;      <span class="comment">%相当于一个输出变量为2的函数</span></span><br><span class="line">        second=num;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span></span><br><span class="line">        first=num;      <span class="comment">%相当于一个输出变量为1的函数</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[first,second]</span>=<span class="title">maxium</span><span class="params">(a,b,c)</span></span></span><br><span class="line"><span class="keyword">if</span> nargin==<span class="number">3</span>        <span class="comment">%相当于一个输入变量为3的函数</span></span><br><span class="line">        <span class="keyword">if</span> a&gt;b</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"b"</span>;num=b;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">if</span> num&lt;c</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"c"</span>;num=c;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">if</span> nargin==<span class="number">2</span>        <span class="comment">%相当于一个输入变量为2的函数</span></span><br><span class="line">        <span class="keyword">if</span> a&gt;b</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"b"</span>,num=b;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">if</span> nargout==<span class="number">2</span>       <span class="comment">%相当于一个输出变量为2的函数</span></span><br><span class="line">        first=<span class="built_in">max</span>;      </span><br><span class="line">        second=num;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">if</span> nargout==<span class="number">1</span>       <span class="comment">%相当于一个输出变量为1的函数</span></span><br><span class="line">        first=num;      </span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="实现方法2："><a href="#实现方法2：" class="headerlink" title="实现方法2："></a>实现方法2：</h2><p>说明：使用varargin,varargout函数</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc;clear;close;</span><br><span class="line">a=<span class="number">9</span>;b=<span class="number">200</span>;c=<span class="number">30</span>;</span><br><span class="line">[<span class="built_in">max</span>,num]=maxium_1(a,b,c)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">varargout</span> = <span class="title">maxium_1</span><span class="params">(varargin)</span></span></span><br><span class="line"><span class="comment">% varargin=[a,b,c];</span></span><br><span class="line"><span class="comment">% varargout=[max,num];</span></span><br><span class="line">a=varargin&#123;<span class="number">1</span>&#125;;b=varargin&#123;<span class="number">2</span>&#125;;c=varargin&#123;<span class="number">3</span>&#125;;</span><br><span class="line"><span class="comment">%输入变量</span></span><br><span class="line"><span class="keyword">if</span> nargin==<span class="number">3</span>        <span class="comment">%相当于一个输入变量为3的函数</span></span><br><span class="line">    <span class="keyword">if</span> a&gt;b</span><br><span class="line">        <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">    <span class="keyword">elseif</span> a&lt;b</span><br><span class="line">        <span class="built_in">max</span>=<span class="string">"b"</span>;num=b;</span><br><span class="line">    <span class="keyword">elseif</span> num&lt;c</span><br><span class="line">        <span class="built_in">max</span>=<span class="string">"c"</span>;num=c;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">if</span> nargin==<span class="number">2</span>        <span class="comment">%相当于一个输入变量为2的函数</span></span><br><span class="line">    <span class="keyword">if</span> a&gt;b</span><br><span class="line">        <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">    <span class="keyword">elseif</span> a&lt;b</span><br><span class="line">        <span class="built_in">max</span>=<span class="string">"b"</span>,num=b;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">%输出变量</span></span><br><span class="line"><span class="keyword">if</span> nargout==<span class="number">2</span></span><br><span class="line">    varargout&#123;<span class="number">1</span>&#125;=<span class="built_in">max</span>;</span><br><span class="line">    varargout&#123;<span class="number">2</span>&#125;=num;</span><br><span class="line"><span class="keyword">elseif</span> nargout==<span class="number">1</span></span><br><span class="line">    varargout&#123;<span class="number">1</span>&#125;=num;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="2-元胞数组的应用"><a href="#2-元胞数组的应用" class="headerlink" title="2.元胞数组的应用"></a>2.元胞数组的应用</h1><h2 id="和（）的区别"><a href="#和（）的区别" class="headerlink" title="{}   和（）的区别"></a>{}   和（）的区别</h2><p>说明：这里可以解释上面，因为varargin本身是个元胞数组，varargin用{}直接引用a,b,c里面的值（数据类型是数值型）</p>
+<p>举例：</p>
+<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc;clear;close;</span><br><span class="line">data1_1=&#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>;<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>&#125;;</span><br><span class="line">data2_1=&#123;<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>&#125;;</span><br><span class="line">data1 = &#123;data1_1,<span class="string">"hello"</span>;data2_1,<span class="number">3</span>&#125;;</span><br><span class="line">data1(<span class="number">2</span>);</span><br><span class="line">[A,B,C]=data1&#123;<span class="number">2</span>&#125;&#123;<span class="number">1</span>,:&#125;;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Matlab</category>
       </categories>
   </entry>
   <entry>
@@ -152,46 +187,6 @@
 ]]></content>
       <categories>
         <category>source</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Matlab</title>
-    <url>/2019/11/25/matlab/</url>
-    <content><![CDATA[<h1 id="1-输入输出参量可变的函数"><a href="#1-输入输出参量可变的函数" class="headerlink" title="1.输入输出参量可变的函数"></a>1.输入输出参量可变的函数</h1><h2 id="实现方法1："><a href="#实现方法1：" class="headerlink" title="实现方法1："></a>实现方法1：</h2><p>说明：nargin,nargout函数，建议里面用为else if省去许多end</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc;clear;close;</span><br><span class="line">a=<span class="number">9</span>;b=<span class="number">200</span>;c=<span class="number">30</span>;</span><br><span class="line">[<span class="built_in">max</span>,num]=maxium(a,b,c)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[first,second]</span>=<span class="title">maxium</span><span class="params">(a,b,c)</span></span></span><br><span class="line"><span class="keyword">switch</span> nargin</span><br><span class="line">    <span class="keyword">case</span> <span class="number">3</span>      <span class="comment">%相当于一个输入变量为3的函数</span></span><br><span class="line">        <span class="keyword">if</span> a&gt;b</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"b"</span>;num=b;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">if</span> num&lt;c</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"c"</span>;num=c;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>      <span class="comment">%相当于一个输入变量为2的函数</span></span><br><span class="line">        <span class="keyword">if</span> a&gt;b</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"b"</span>,num=b;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">switch</span> nargout</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span></span><br><span class="line">        first=<span class="built_in">max</span>;      <span class="comment">%相当于一个输出变量为2的函数</span></span><br><span class="line">        second=num;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span></span><br><span class="line">        first=num;      <span class="comment">%相当于一个输出变量为1的函数</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[first,second]</span>=<span class="title">maxium</span><span class="params">(a,b,c)</span></span></span><br><span class="line"><span class="keyword">if</span> nargin==<span class="number">3</span>        <span class="comment">%相当于一个输入变量为3的函数</span></span><br><span class="line">        <span class="keyword">if</span> a&gt;b</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"b"</span>;num=b;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">if</span> num&lt;c</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"c"</span>;num=c;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">if</span> nargin==<span class="number">2</span>        <span class="comment">%相当于一个输入变量为2的函数</span></span><br><span class="line">        <span class="keyword">if</span> a&gt;b</span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">max</span>=<span class="string">"b"</span>,num=b;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">if</span> nargout==<span class="number">2</span>       <span class="comment">%相当于一个输出变量为2的函数</span></span><br><span class="line">        first=<span class="built_in">max</span>;      </span><br><span class="line">        second=num;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">if</span> nargout==<span class="number">1</span>       <span class="comment">%相当于一个输出变量为1的函数</span></span><br><span class="line">        first=num;      </span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="实现方法2："><a href="#实现方法2：" class="headerlink" title="实现方法2："></a>实现方法2：</h2><p>说明：使用varargin,varargout函数</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc;clear;close;</span><br><span class="line">a=<span class="number">9</span>;b=<span class="number">200</span>;c=<span class="number">30</span>;</span><br><span class="line">[<span class="built_in">max</span>,num]=maxium_1(a,b,c)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">varargout</span> = <span class="title">maxium_1</span><span class="params">(varargin)</span></span></span><br><span class="line"><span class="comment">% varargin=[a,b,c];</span></span><br><span class="line"><span class="comment">% varargout=[max,num];</span></span><br><span class="line">a=varargin&#123;<span class="number">1</span>&#125;;b=varargin&#123;<span class="number">2</span>&#125;;c=varargin&#123;<span class="number">3</span>&#125;;</span><br><span class="line"><span class="comment">%输入变量</span></span><br><span class="line"><span class="keyword">if</span> nargin==<span class="number">3</span>        <span class="comment">%相当于一个输入变量为3的函数</span></span><br><span class="line">    <span class="keyword">if</span> a&gt;b</span><br><span class="line">        <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">    <span class="keyword">elseif</span> a&lt;b</span><br><span class="line">        <span class="built_in">max</span>=<span class="string">"b"</span>;num=b;</span><br><span class="line">    <span class="keyword">elseif</span> num&lt;c</span><br><span class="line">        <span class="built_in">max</span>=<span class="string">"c"</span>;num=c;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">if</span> nargin==<span class="number">2</span>        <span class="comment">%相当于一个输入变量为2的函数</span></span><br><span class="line">    <span class="keyword">if</span> a&gt;b</span><br><span class="line">        <span class="built_in">max</span>=<span class="string">"a"</span>;num=a;</span><br><span class="line">    <span class="keyword">elseif</span> a&lt;b</span><br><span class="line">        <span class="built_in">max</span>=<span class="string">"b"</span>,num=b;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">%输出变量</span></span><br><span class="line"><span class="keyword">if</span> nargout==<span class="number">2</span></span><br><span class="line">    varargout&#123;<span class="number">1</span>&#125;=<span class="built_in">max</span>;</span><br><span class="line">    varargout&#123;<span class="number">2</span>&#125;=num;</span><br><span class="line"><span class="keyword">elseif</span> nargout==<span class="number">1</span></span><br><span class="line">    varargout&#123;<span class="number">1</span>&#125;=num;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="2-元胞数组的应用"><a href="#2-元胞数组的应用" class="headerlink" title="2.元胞数组的应用"></a>2.元胞数组的应用</h1><h2 id="和（）的区别"><a href="#和（）的区别" class="headerlink" title="{}   和（）的区别"></a>{}   和（）的区别</h2><p>说明：这里可以解释上面，因为varargin本身是个元胞数组，varargin用{}直接引用a,b,c里面的值（数据类型是数值型）</p>
-<p>举例：</p>
-<figure class="highlight matlab"><table><tr><td class="code"><pre><span class="line">clc;clear;close;</span><br><span class="line">data1_1=&#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>;<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>&#125;;</span><br><span class="line">data2_1=&#123;<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>&#125;;</span><br><span class="line">data1 = &#123;data1_1,<span class="string">"hello"</span>;data2_1,<span class="number">3</span>&#125;;</span><br><span class="line">data1(<span class="number">2</span>);</span><br><span class="line">[A,B,C]=data1&#123;<span class="number">2</span>&#125;&#123;<span class="number">1</span>,:&#125;;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Matlab</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>清华园讲座</title>
-    <url>/2019/12/20/speech/</url>
-    <content><![CDATA[<p>讲座更新中</p>
-
-
-	<div class="row">
-    <embed src="./main.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-]]></content>
-      <categories>
-        <category>speech</category>
       </categories>
   </entry>
   <entry>
@@ -244,6 +239,22 @@
 <h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h3 id="序列"><a href="#序列" class="headerlink" title="序列"></a>序列</h3><h1 id="第六章：函数"><a href="#第六章：函数" class="headerlink" title="第六章：函数"></a>第六章：函数</h1>]]></content>
       <categories>
         <category>python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>清华园讲座</title>
+    <url>/2019/12/20/speech/</url>
+    <content><![CDATA[<p>讲座更新中</p>
+
+
+	<div class="row">
+    <embed src="./main.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
+]]></content>
+      <categories>
+        <category>speech</category>
       </categories>
   </entry>
   <entry>
