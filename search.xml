@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Individual resume</title>
-    <url>/2023/07/02/Individual%20resume/</url>
-    <content><![CDATA[<h1 id="个人总结"><a href="#个人总结" class="headerlink" title="个人总结"></a>个人总结</h1><p>直博四年级在读，研究课题为金属陶瓷X射线管的设计研究</p>
-<p>目前已研制出160kV金属陶瓷X射线管样机，研究内容包含电子束聚焦结构设计、阳极靶结构设计、热阴极灯丝结构设计、器件热仿真和散热设计优化、电子束打靶模拟、超高真空封接工艺、灯丝寿命加速实验设计、射线管焦点尺寸测试方法等，具备定制化整管的能力，对整个X射线管行业的应用和发展具有比较全面的了解。</p>
-]]></content>
-      <categories>
-        <category>Source</category>
-      </categories>
-  </entry>
-  <entry>
     <title>GitHub+Hexo 搭建个人主页</title>
     <url>/2019/08/29/Hexo+Github/</url>
     <content><![CDATA[<h1 id="搭建过程中遇到的问题和解决方案（基于win10）"><a href="#搭建过程中遇到的问题和解决方案（基于win10）" class="headerlink" title="搭建过程中遇到的问题和解决方案（基于win10）"></a>搭建过程中遇到的问题和解决方案（基于win10）</h1><p><strong>说明：整套搭建是参考<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">吴润·RunDouble</a></strong></p>
@@ -87,6 +77,29 @@
       </categories>
   </entry>
   <entry>
+    <title>学习资源分享</title>
+    <url>/2019/09/01/Source/</url>
+    <content><![CDATA[<h1 id="清华大学实验安全教育考试题库"><a href="#清华大学实验安全教育考试题库" class="headerlink" title="清华大学实验安全教育考试题库"></a>清华大学实验安全教育考试题库</h1><p>链接：<a href="https://pan.baidu.com/s/1tYtOwMwS3_OCNdlHnomFMA" target="_blank" rel="noopener">https://pan.baidu.com/s/1tYtOwMwS3_OCNdlHnomFMA</a><br>提取码：dale </p>
+<h1 id="电子枪与离子束技术"><a href="#电子枪与离子束技术" class="headerlink" title="电子枪与离子束技术"></a>电子枪与离子束技术</h1><p>张以忱编著    出版社：冶金工业出版社</p>
+<p>链接：<a href="https://pan.baidu.com/s/1w1eSFhPQmgxBg4zw_5-gJA" target="_blank" rel="noopener">https://pan.baidu.com/s/1w1eSFhPQmgxBg4zw_5-gJA</a><br>提取码：97qj </p>
+<h1 id="UltraEdit"><a href="#UltraEdit" class="headerlink" title="UltraEdit"></a>UltraEdit</h1><p>简介： <strong>UltraEdit</strong>（原名UltraEdit-32）是跨平台的一套商业性文本编辑器，由IDM Computer Solutions在1994年创造。UltraEdit有很强大的编程功能，支持宏、语法高亮度显示和正则表达式等功能。文件在标签中可以被浏览和编辑。安装需要约30 MB的磁盘空间。UltraEdit也支持以Unicode和hex编辑的模式 。</p>
+<p>链接：<a href="https://pan.baidu.com/s/11NF30WgbwwGgfL8vf6hDcQ" target="_blank" rel="noopener">https://pan.baidu.com/s/11NF30WgbwwGgfL8vf6hDcQ</a><br>提取码：hqy6 </p>
+]]></content>
+      <categories>
+        <category>source</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Individual resume</title>
+    <url>/2023/07/02/Individual%20resume/</url>
+    <content><![CDATA[<h1 id="个人总结"><a href="#个人总结" class="headerlink" title="个人总结"></a>个人总结</h1><p>直博四年级在读，研究课题为金属陶瓷X射线管的设计研究</p>
+<p>目前已研制出160kV金属陶瓷X射线管样机，研究内容包含电子束聚焦结构设计、阳极靶结构设计、热阴极灯丝结构设计、器件热仿真和散热设计优化、电子束打靶模拟、超高真空封接工艺、灯丝寿命加速实验设计、射线管焦点尺寸测试方法等，具备定制化整管的能力，对整个X射线管行业的应用和发展具有比较全面的了解。</p>
+]]></content>
+      <categories>
+        <category>Source</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Matlab</title>
     <url>/2019/11/25/matlab/</url>
     <content><![CDATA[<h1 id="1-输入输出参量可变的函数"><a href="#1-输入输出参量可变的函数" class="headerlink" title="1.输入输出参量可变的函数"></a>1.输入输出参量可变的函数</h1><h2 id="实现方法1："><a href="#实现方法1：" class="headerlink" title="实现方法1："></a>实现方法1：</h2><p>说明：nargin,nargout函数，建议里面用为else if省去许多end</p>
@@ -111,16 +124,19 @@
       </categories>
   </entry>
   <entry>
-    <title>学习资源分享</title>
-    <url>/2019/09/01/Source/</url>
-    <content><![CDATA[<h1 id="清华大学实验安全教育考试题库"><a href="#清华大学实验安全教育考试题库" class="headerlink" title="清华大学实验安全教育考试题库"></a>清华大学实验安全教育考试题库</h1><p>链接：<a href="https://pan.baidu.com/s/1tYtOwMwS3_OCNdlHnomFMA" target="_blank" rel="noopener">https://pan.baidu.com/s/1tYtOwMwS3_OCNdlHnomFMA</a><br>提取码：dale </p>
-<h1 id="电子枪与离子束技术"><a href="#电子枪与离子束技术" class="headerlink" title="电子枪与离子束技术"></a>电子枪与离子束技术</h1><p>张以忱编著    出版社：冶金工业出版社</p>
-<p>链接：<a href="https://pan.baidu.com/s/1w1eSFhPQmgxBg4zw_5-gJA" target="_blank" rel="noopener">https://pan.baidu.com/s/1w1eSFhPQmgxBg4zw_5-gJA</a><br>提取码：97qj </p>
-<h1 id="UltraEdit"><a href="#UltraEdit" class="headerlink" title="UltraEdit"></a>UltraEdit</h1><p>简介： <strong>UltraEdit</strong>（原名UltraEdit-32）是跨平台的一套商业性文本编辑器，由IDM Computer Solutions在1994年创造。UltraEdit有很强大的编程功能，支持宏、语法高亮度显示和正则表达式等功能。文件在标签中可以被浏览和编辑。安装需要约30 MB的磁盘空间。UltraEdit也支持以Unicode和hex编辑的模式 。</p>
-<p>链接：<a href="https://pan.baidu.com/s/11NF30WgbwwGgfL8vf6hDcQ" target="_blank" rel="noopener">https://pan.baidu.com/s/11NF30WgbwwGgfL8vf6hDcQ</a><br>提取码：hqy6 </p>
+    <title>清华园讲座</title>
+    <url>/2019/12/20/speech/</url>
+    <content><![CDATA[<p>讲座更新中</p>
+
+
+	<div class="row">
+    <embed src="./main.pdf" width="100%" height="550" type="application/pdf">
+	</div>
+
+
 ]]></content>
       <categories>
-        <category>source</category>
+        <category>speech</category>
       </categories>
   </entry>
   <entry>
@@ -169,22 +185,6 @@
 ]]></content>
       <categories>
         <category>source</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>清华园讲座</title>
-    <url>/2019/12/20/speech/</url>
-    <content><![CDATA[<p>讲座更新中</p>
-
-
-	<div class="row">
-    <embed src="./main.pdf" width="100%" height="550" type="application/pdf">
-	</div>
-
-
-]]></content>
-      <categories>
-        <category>speech</category>
       </categories>
   </entry>
   <entry>
